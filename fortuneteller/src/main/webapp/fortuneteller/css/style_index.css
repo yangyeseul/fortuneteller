@@ -1,0 +1,262 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('/fortunetellerfont/Pretendard-Regular.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Pretendard-Bold';
+    src: url('/fortunetellerfont/Pretendard-Bold.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Pretendard-SemiBold';
+    src: url('/fortunetellerfont/Pretendard-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Cafe24Ssurround';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+* {
+	margin:0;
+	padding:0;
+	list-style:none;
+	text-decoration:none;
+	color:#454545;
+}
+
+html {
+	width:100%;
+	height:100%;
+}
+
+body {
+	font-family: 'Pretendard-Regular';
+	width:100%;
+	background:#fff;
+	min-height:fit-content;
+}
+
+button {
+	font-family: 'Cafe24Ssurround';
+}
+
+.wrapped {
+	display:flex;
+	flex-direction:column;
+	margin:0 auto;
+	width:1200px;
+}
+
+.top {
+	position:sticky;
+	top:0;
+	left:0;
+	display:flex;
+	align-items:center;
+	width:100%;
+	height:100px;
+	background:rgba(255, 255, 255, 0.9);
+}
+
+.top_wrap {
+	width:100%;
+	display:flex;
+	justify-content:space-between;
+}
+
+.top_wrap > .top_logo {
+	width:250px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+
+.top_buttons {
+	margin-right:50px;
+	width:180px;
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+}
+
+.top_wrap > .top_buttons > button {
+	border:none;
+	background:none;
+}
+
+.top_wrap > .top_buttons > button > a {
+	font-size:15px !important;
+	border-radius:30px;
+	background:#fddd5f;
+	padding:10px 20px;
+}
+
+.top_wrap > .top_buttons > button > a:hover {
+	font-size:15px !important;
+	border-radius:30px;
+	background:#454545;
+	color:#fddd5f;
+	padding:10px 20px;
+}
+
+.section {
+	display:flex;
+	width:1200px;
+}
+
+.nav {
+	position:sticky;
+	top:100px;
+	left:0;
+	width:250px;
+	height:calc(100vh - 100px);
+	background-image:url('/fortuneteller/img/pattern1.png');
+	background-repeat:repeat;
+	display:flex;
+	flex-direction:column;
+	justify-content:space-between;
+}
+
+.nav_wrap {
+	margin:50px 25px;
+}
+
+.nav_title {
+	font-family: 'Pretendard-Bold';
+	font-weight:900;
+	letter-spacing:-2px;
+	font-size:30px;
+}
+
+.nav_board, .nav_siteGuide {
+	margin-top:25px;
+}
+
+.nav_wrap > div > ul {
+	width:100%;
+}
+
+.nav_wrap > div > ul > li > a {
+	display:inline-block;
+	margin:6px 0px; 
+	letter-spacing:-2.5px;
+	font-size:16px;
+}
+
+.nav_wrap > div > ul > li > a:hover {
+	font-family: 'Pretendard-Bold';
+	font-weight:900;
+}
+
+.nav_footer {
+	margin:50px 25px;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+}
+
+.nav_footer_copyright {
+	margin-top:10px;
+	letter-spacing:-0.2px;
+	font-size:14px;
+}
+
+.content {
+	padding-top:30px;
+	padding-bottom:75px;
+	background:white;
+	width:950px;
+	height:auto;
+	display:flex;
+	flex-direction:column;
+	justify-content:flex-start;
+	align-items:center;
+}
+
+
+
+.main_text {
+	font-family: 'Pretendard-Regular';
+	font-size:32px;
+	letter-spacing:-4px;
+	line-height:35px;
+	text-align:center;
+}
+
+.main_text > span {
+	font-family: 'Pretendard-Bold';
+	font-weight:900;
+	letter-spacing:-4px;
+	font-size:32px;
+	line-height:35px;
+	background:linear-gradient(to bottom, white 30%, #d4f9ff 30% 70%, white 70%);
+}
+
+.main_slide_hashtag {
+	margin:20px auto;
+	width:650px;
+	display:flex;
+	justify-content:space-evenly;
+	align-items:center;
+}
+
+.main_slide_hashtag > li > a {
+	font-family: 'Cafe24Ssurround';
+	font-size:19px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	border:5px solid #ffee9d;
+	border-radius:50px;
+	padding:5px 10px;
+}
+
+.main_wrap {
+	position:relative;
+	width:678px;
+	height:auto;
+}
+
+.main_content {
+	display:flex;
+	margin:0 auto;
+	width:600px;
+}
+
+.main_slide {
+	width:600px;
+}
+
+.main_slide > a {
+	width:600px;
+}
+
+.main_slide > a > img {
+	margin:0 auto;
+	max-width:100%;
+}
+
+.prevArrow {
+	position:absolute;
+	top:50%;
+	left:0;
+	transform: translateY(-50%);
+}
+
+.nextArrow {
+	position:absolute;
+	top:50%;
+	right:0;
+	transform: translateY(-50%);
+}
+

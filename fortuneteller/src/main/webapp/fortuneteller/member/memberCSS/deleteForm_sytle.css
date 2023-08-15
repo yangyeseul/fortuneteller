@@ -1,0 +1,57 @@
+@charset "UTF-8";
+.form input[type=password]{
+			width: 330px;
+			height : 35px;
+    		border-radius: 30px;
+    		background: #F7F5F5;
+			border:none;
+}
+
+.form input[type=button]{
+	height:40px;
+	width:250px;
+	font-size:15px !important;
+	border-radius:30px;
+	background:#fddd5f;
+	 border: 1px solid #fddd5f;
+	 padding:10px 15px;
+	  text-decoration-line: none;
+	  color:#454545;
+	 
+}
+.form input[type=button]:hover{
+	height:40px;
+	width:250px;
+	font-size:15px !important;
+	border-radius:30px;
+	background:#454545;
+	 border: 1px solid #454545;
+	 padding:10px 15px;
+	  text-decoration-line: none;
+	  color:#fddd5f;
+	 
+}
+.delete_text {
+	font-family: 'Pretendard-Regular';
+	font-size:32px;
+	letter-spacing:-2px;
+	line-height:35px;
+    padding-bottom: 30px;
+    padding-left: 47px;
+	
+}
+.delete_text > span {
+	font-family: 'Pretendard-Bold';
+	font-weight:700;
+	font-size:32px;
+	letter-spacing:-2px;
+	line-height:35px;
+	background:linear-gradient(to bottom, white 30%, #d4f9ff 30% 70%, white 70%);
+}
+table{
+    padding-right: 218px;
+}
+#deleteBtn{
+    padding-left: 131px;
+    padding-top: 18px;
+}

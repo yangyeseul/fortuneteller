@@ -1,0 +1,143 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('/fortunetellerfont/Pretendard-Regular.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Pretendard-Bold';
+    src: url('/fortunetellerfont/Pretendard-Bold.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Pretendard-SemiBold';
+    src: url('/fortunetellerfont/Pretendard-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Cafe24Ssurround';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+* {
+	margin:0;
+	padding:0;
+	list-style:none;
+	text-decoration:none;
+	color:#454545;
+}
+
+html {
+	width:100%;
+	height:100%;
+}
+
+body {
+	font-family: 'Pretendard-Regular';
+	width:100%;
+	background:#fff;
+	min-height:fit-content;
+}
+
+.ootd_text {
+	font-family: 'Pretendard-Regular';
+	font-size:32px;
+	letter-spacing:-4px;
+	line-height:35px;
+	text-align:center;
+}
+
+.ootd_text > span {
+	font-family: 'Pretendard-Bold';
+	font-weight:900;
+	font-size:32px;
+	letter-spacing:-4px;
+	line-height:35px;
+	background:linear-gradient(to bottom, white 30%, #d4f9ff 30% 70%, white 70%);
+}
+
+.test_wrap {
+	width:500px;
+	height:700px;
+	margin-top:20px;
+	border: 4px solid #eee;
+	border-radius:30px;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+.test_title {
+	font-family: 'Pretendard-Bold';
+	letter-spacing:-1.7px;
+	font-size: 22px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 90%;
+	height: 60px;
+	border-bottom: 2px solid #eee;
+}
+
+.test_bubble {
+	width: 90%;
+	height: 100%;
+	display:flex;
+	flex-direction:column;
+	align-items:space-between;
+}
+
+.test_left_bubble_wrap {
+	width:60%;
+	display: flex;
+	margin: 15px 0px;
+}
+
+.test_left_bubble_img {
+	width: 60px;
+}
+
+.test_left_bubble_img > img {
+	display: block;
+	max-width: 100%;
+}
+
+.test_left_bubble_text {
+	margin-left: 5px;
+	display:flex;
+	flex-direction: column;
+}
+
+.test_left_bubble_first > div {
+	display: inline-block;
+	width: auto;
+	font-size:16px;
+	letter-spacing:-1.5px;
+	line-height:16px;
+	margin-top: 15px;
+	padding: 10px 20px;
+	background: #eee;
+	border: 0px;
+	border-radius: 30px;
+}
+
+.test_left_bubble div {
+	display: inline-block;
+	width: auto;
+	font-size:16px;
+	letter-spacing:-1.5px;
+	line-height:16px;
+	margin-top: 10px;
+	padding: 10px 20px;
+	background: #eee;
+	border: 0px;
+	border-radius: 30px;
+}
