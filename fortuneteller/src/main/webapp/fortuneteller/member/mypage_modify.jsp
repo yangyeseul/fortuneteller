@@ -15,7 +15,7 @@ String gender = daoPro.getGender();
 <html>
 <head>
 <meta charset="UTF-8">
-<title>회원가입</title>
+<title>FortuneTeller</title>
 <link type="text/css" rel="stylesheet" href="/fortuneteller/member/memberCSS/modify_sytle.css">
 <script type="text/javascript" src="script.js"></script>
 </head>
@@ -23,21 +23,21 @@ String gender = daoPro.getGender();
 
 	<div class="check">
 		<a href="/fortuneteller/index.jsp?page=mypage_modify.jsp">
-			<button class="button" id="memberModify" >회원
-				정보 수정</button>
-		</a> &nbsp;&nbsp;&nbsp; <a
-			href="/fortuneteller/index.jsp?page=history.jsp">
-			<button class="button" id="history">이전
-				결과 확인</button>
+			<button class="button" id="modInputBtn">회원정보 수정</button>
+		</a> &nbsp;&nbsp;
+		<a href="/fortuneteller/index.jsp?page=history.jsp">
+			<button class="button" id="modInputBtn_before">이전결과 확인</button>
 		</a>
 	</div>
 	
-	<form action="member/modifyProc.jsp" method="post" name="modifyForm">
-		<table cellpadding="5" cellspacing="15">
+	<form action="member/modifyProc.jsp" method="post" name="modifyForm" class="modifyForm">
+		<table cellpadding="5" class="regForm_text"cellspacing="15" width="500">
+			<!-- <div class="reg_text"><span>회원정보</span>를 입력해 주세요</div> -->
 			<tr>
-				<td >아이디</td>
-				<td  width="700" >
-					<div class="form">
+				<td align="center">아이디</td>
+				
+				<td align="center">
+					<div class="form" id="idForm">
 						<%=loginID %>
 					</div>
 				</td>
@@ -45,7 +45,7 @@ String gender = daoPro.getGender();
 
 			<tr>
 				<td>비밀번호</td>
-				<td>
+				<td align="center">
 					<div class="form">
 						<input type="password" name="pass" value="<%=daoPro.getPass()%>">
 					</div>
@@ -54,7 +54,7 @@ String gender = daoPro.getGender();
 
 			<tr>
 				<td>비밀번호 확인</td>
-				<td>
+				<td align="right">
 					<div class="form">
 						<input type="password" name="repass">
 					</div>
@@ -63,8 +63,8 @@ String gender = daoPro.getGender();
 
 			<tr>
 				<td>이름</td>
-				<td>
-					<div class="form">
+				<td align="center">
+					<div class="form" id="nameForm">
 						<%=daoPro.getName() %>
 					</div>
 				</td>
@@ -72,25 +72,21 @@ String gender = daoPro.getGender();
 
 			<tr>
 				<td>이메일</td>
-				<td>
+				<td align="right">
 					<div class="form">
 						<input type="email" name="email" value="<%=daoPro.getEmail()%>">
 					</div>
 				</td>
 			</tr>
-			
-			<%-- <%if(gender.equals("male")){ %>
-			
+			<%if(gender.equals("male")){ %>
 			<tr>
-			<td>
-				성별&nbsp;</td>
+				<td>성별</td>
 				<td>
 					<div class="mb-3">
-						<div
-							class=" row-vh d-flex flex-row justify-content-between">
+						<div class=" row-vh d-flex flex-row justify-content-between">
 							<div class="form_radio_btn">
-								<input id="radio-1" type="radio" name="gender" value="male"
-									checked> <label for="radio-1">남성</label>
+								<input id="radio-1" type="radio" name="gender" value="male" checked> 
+								<label for="radio-1">남성</label>
 							</div>
 
 							<div class="form_radio_btn radio_female">
@@ -99,16 +95,14 @@ String gender = daoPro.getGender();
 							</div>
 						</div>
 					</div>
-					</td>
-		</tr>
-		<%}else{ %>
+				</td>
+			</tr>
+			<%}else{ %>
 			<tr>
-			<td>
-				성별&nbsp;</td>
+				<td>성별</td>
 				<td>
 					<div class="mb-3">
-						<div
-							class=" row-vh d-flex flex-row justify-content-between">
+						<div class=" row-vh d-flex flex-row justify-content-between">
 							<div class="form_radio_btn">
 								<input id="radio-1" type="radio" name="gender" value="male"> 
 								<label for="radio-1">남성</label>
@@ -120,14 +114,15 @@ String gender = daoPro.getGender();
 							</div>
 						</div>
 					</div>
-					</td>
-		</tr>
-		<%} %> --%>
+				</td>
+			</tr>
+			<%} %>
 			<tr>
 				<td>생년월일</td>
-				<td><select name="year" class="select">
+				<td align="right"><select name="year" class="select">
 						<option><%=daoPro.getYear()%></option>
-				</select>년 
+				</select>&nbsp;&nbsp;년 
+				&nbsp;&nbsp;&nbsp;&nbsp;
 				<select name="month" class="select">
 						<%
 							if (daoPro.getMonth() < 10) {
@@ -140,7 +135,8 @@ String gender = daoPro.getGender();
 						<%
 						}
 						%>
-				</select>월 
+				</select>&nbsp;&nbsp;월 
+				&nbsp;&nbsp;&nbsp;&nbsp;
 				<select name="day" class="select">
 						<%
 							if (daoPro.getDay() < 10) {
@@ -153,18 +149,17 @@ String gender = daoPro.getGender();
 						<%
 						}
 						%>
-						
-				</select>일</td>
+				</select>&nbsp;&nbsp;일</td>
 			</tr>
 		</table>
-				<div class="modifyBtn">
-				<input type="button" value="회원정보 수정하기" onclick="modifyCheck()" id="modifyInputBtn">&nbsp;&nbsp;&nbsp;
-				<a href="/fortuneteller/index.jsp?page=deleteForm.jsp" id="deleteInputBtn">회원탈퇴</a>
-				</div>
+		
+		<div class="modifyBtn">
+			<input type="button" value="MODIFY" onclick="modifyCheck()" id="modifyBtn">&nbsp;&nbsp;&nbsp;
+			<button>
+				<a href="/fortuneteller/index.jsp?page=deleteForm.jsp">DELETE</a>
+			</button>
+			
+		</div>
 	</form>
-
-
-
-
 </body>
 </html>

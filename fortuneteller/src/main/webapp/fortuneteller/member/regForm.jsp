@@ -61,25 +61,24 @@
 			</tr>
 			
 			<tr>
-			<td>
-				성별&nbsp;</td>
+				<td>성별</td>
 				<td align="right">
 					<div class="mb-3">
 						<div
 							class="form_toggle row-vh d-flex flex-row justify-content-between">
 							<div class="form_radio_btn">
-								<input id="radio-1" type="radio" name="gender" value="male"
+								<input id="radio-1" type="radio" name="gender" value="남자"
 									checked> <label for="radio-1">남성</label>
 							</div>
 
 							<div class="form_radio_btn radio_female">
-								<input id="radio-2" type="radio" name="gender" value="female">
+								<input id="radio-2" type="radio" name="gender" value="여자">
 								<label for="radio-2">여성</label>
 							</div>
 						</div>
 					</div>
-					</td>
-		</tr>
+				</td>
+			</tr>
 			<tr>
 				<td>생년월일</td>
 				<td align="right"><select name="year" class="select">
@@ -120,15 +119,15 @@
 				</select>&nbsp;&nbsp;일</td>
 			</tr>
 			<tr>
-				<td colspan="2"><div class="regBtn"><input type="button" value="JOIN"
-					onclick="inputCheck()" id="regInputBtn"></div></td>
+				<td colspan="2">
+					<div class="regBtn">
+						<input type="button" value="JOIN" onclick="inputCheck()" id="regInputBtn">
+					</div>
+				</td>
 			</tr>
 
 		</table>
 	</form>
-
-
-
 
 </body>
 </html>

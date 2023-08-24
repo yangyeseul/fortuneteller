@@ -1,41 +1,39 @@
 @charset "UTF-8";
-/* @font-face {
+@font-face {
     font-family: 'Pretendard-Bold';
     src: url('/fortunetellerfont/Pretendard-Bold.woff') format('woff');
     font-weight: 900;
     font-style: normal;
-} */
-.check{
-	 padding-left: 70px;
-    padding-bottom: 40px;
 }
-#memberModify{
-	font-family: 'Pretendard-Bold';
+@font-face {
+    font-family: 'Cafe24Ssurround';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+form {
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	justigy-content:flex-start;
+	width:100%;
+	text-align:center;
+}
+
+td {
+	letter-spacing:-1.5px;
+}
+
+input[type=button] {
+	font-family: 'Cafe24Ssurround';
 	color:#454545;
-	width:150px;
-	display: inline-block;
-	height:40px;
-	font-size:15px !important;
-	border-radius:30px;
-	background:#fddd5f;
-	 border: 1px solid #fddd5f;
-	 padding:10px 15px;
-	 margin-left: 7px;
 }
-#history  {
-	font-family: 'Pretendard-Bold';
-	color:#fff;
-	width:150px;
-	display: inline-block;
-	height:40px;
-	font-size:15px !important;
-	border-radius:30px;
-	background:#454545;
-	 border: 1px solid #454545;
-	 padding:10px 15px;
-	 margin-left: 7px;
+
+input {
+	text-align:center;
 }
-/* 성별
+
 .form_radio_btn {
 			width: 170px;
 			height : 40px;
@@ -46,46 +44,62 @@
 			padding-left:10px;
 		}
 		
-		.form_radio_btn input[type=button] {
+		.form_radio_btn input[type=radio] {
 			display: none; 
 		}
 		
 		.form_radio_btn label {
+			font-weight:900;
 			display: block;
     		border-radius: 30px;
    			margin: 0 auto;
     		text-align: center;
     		height: -webkit-fill-available;
-    		line-height: 45px;
+    		line-height: 40px;
 		}
 		 
-		Checked
+		/* Checked */
 		.form_radio_btn input[type=radio]:checked + label {
 			background: #FDDD5F;
-			color: #fff;
+			color: #454545;
 		}
 		 
-		Disabled
+		/* Hover */
+		.form_radio_btn label:hover {
+			color: #666;
+		}
+		 
+		/* Disabled */
 		.form_radio_btn input[type=radio] + label {
 			background: #F7F5F5;
 			color: #666;
 		}
-		 */
+		
+#idForm input[type=text]{
+			width: 240px;
+			height : 35px;
+    		border-radius: 30px;
+    		background: #F7F5F5;
+			border: 1px solid #F7F5F5;
+	
+}
 
-.form input[type=text]{
-			width: 330px;
+#nameForm input[type=text]{
+			width: 355px;
 			height : 35px;
     		border-radius: 30px;
     		background: #F7F5F5;
 			border:none;
 }
+
 .form input[type=password]{
-			width: 330px;
+			width: 355px;
 			height : 35px;
     		border-radius: 30px;
     		background: #F7F5F5;
 			border:none;
 }
+
 .form input[type=email]{
 			width: 355px;
 			height : 35px;
@@ -93,59 +107,187 @@
     		background: #F7F5F5;
 			border:none;
 }
-/* .select {
-	width : 100px;
+
+.select {
+	width : 85px;
     height: 30px;
     border: 1px solid #F7F5F5;
     border-radius: 30px;
     position: relative;
     background: #F7F5F5;
     text-align: center;
-} */
+}
 
-#modifyInputBtn{
-font-size:15px !important;
+#modInputBtn{
+	cursor: pointer;
+	margin-top:20px;
+	font-size:15px !important;
 	border-radius:30px;
 	background:#fddd5f;
 	padding:10px 20px;
-	 border: 1px solid #fddd5f;
-	 height:40px;
+	border: 1px solid #fddd5f;
+	height:40px;
 	width:250px;
 }
-#modifyInputBtn:hover {
+
+#modInputBtn:hover {
+	cursor: pointer;
 	font-size:15px !important;
 	border-radius:30px;
-	background:#ffad2b;
+	background:#454545;
+	border: 1px solid #454545;
+	color:#fddd5f;
 	padding:10px 20px;
 	height:40px;
 	width:250px;
 }
-#deleteInputBtn{
-font-size:15px !important;
+
+#modInputBtn_before {
+	cursor: pointer;
+	font-size:15px !important;
 	border-radius:30px;
-	background:#fddd5f;
+	background:#454545;
+	border: 1px solid #454545;
+	color:#fddd5f;
 	padding:10px 20px;
-	 border: 1px solid #fddd5f;
-	 height:40px;
-	width:100px;
+	height:40px;
+	width:250px;
 }
-#deleteInputBtn:hover {
+
+#modInputBtn_before:hover{
+	cursor: pointer;
+	margin-top:20px;
 	font-size:15px !important;
 	border-radius:30px;
 	background:#fddd5f;
+	padding:10px 20px;
+	border: 1px solid #fddd5f;
+	height:40px;
+	width:250px;
+}
+
+#modifyBtn {
+	cursor: pointer;
+	margin-top:20px;
+	font-size:15px !important;
+	border-radius:30px;
+	background:#fddd5f;
+	padding:10px 20px;
+	border: 1px solid #fddd5f;
+	height:40px;
+}
+
+#modifyBtn:hover {
+	cursor: pointer;
+	font-size:15px !important;
+	border-radius:30px;
+	background:#454545;
+	border: 1px solid #454545;
+	color:#fddd5f;
+	padding:10px 20px;
+	height:40px;
+}
+
+.modifyBtn button {
+	border:none;
+	background:none;
+}
+
+.modifyBtn button > a {
+	font-size:15px !important;
+	border-radius:30px;
+	background:#fddd5f;
+	padding:10px 20px;
+}
+
+.modifyBtn button > a:hover {
+	font-size:15px !important;
+	border-radius:30px;
+	background:#454545;
+	color:#fddd5f;
+	padding:10px 20px;
+}
+
+#idCheckBtn{
+	width:100px;
+	display: inline-block;
+	height:40px;
+	font-size:15px !important;
+	border-radius:30px;
+	background:#fddd5f;
+	 border: 1px solid #fddd5f;
+	 padding:10px 15px;
+	 margin-left: 7px;
+}
+
+#idCheckBtn:hover{
+	width:100px;
+	display: inline-block;
+	height:40px;
+	font-size:15px !important;
+	border-radius:30px;
+	background:#454545;
+	 border: 1px solid #454545;
+	 padding:10px 15px;
+	 margin-left: 7px;
+	 color:#fddd5f;
+	 
+}
+
+.idCheckPlace{
+	margin-top: 70px;
 	color:#454545;
-	padding:10px 20px;
+}
+
+.idCheckPlace > a{
 	height:40px;
-	width:100px;
+	font-size:15px !important;
+	border-radius:30px;
+	background:#fddd5f;
+	 border: 1px solid #fddd5f;
+	 padding:10px 15px;
+	  text-decoration-line: none;
+	  color:#454545;
 }
 
-form{
-    padding-left: 250px;
-    padding-bottom: 100px;
-    white-space:nowrap;
-}
-.modifyBtn{
-    padding-left: 69px;
-    padding-top: 15px;
+.idCheckPlace > a:hover{
+	height:40px;
+	font-size:15px !important;
+	border-radius:30px;
+	background:#fddd5f;
+	 border: 1px solid #fddd5f;
+	 padding:10px 15px;
+	  text-decoration-line: none;
+	  color:#454545;
 }
 
+.reg_text {
+	text-align:center;
+	font-family: 'Pretendard-Regular';
+	font-size:32px;
+	letter-spacing:-4px;
+	line-height:35px;
+    padding-bottom: 30px;
+	
+}
+
+.reg_text > span {
+	font-family: 'Pretendard-Bold';
+	font-weight:700;
+	font-size:32px;
+	letter-spacing:-4px;
+	line-height:35px;
+	background:linear-gradient(to bottom, white 30%, #d4f9ff 30% 70%, white 70%);
+}
+
+.regForm_text{
+	white-space:nowrap;
+}
+
+.modifyBtn {
+	margin-top:30px;	
+}
+
+.modifyForm {
+	margin-top: 40px;
+}

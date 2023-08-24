@@ -1,0 +1,92 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('/fortunetellerfont/Pretendard-Regular.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Pretendard-Bold';
+    src: url('/fortunetellerfont/Pretendard-Bold.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Pretendard-SemiBold';
+    src: url('/fortunetellerfont/Pretendard-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Cafe24Ssurround';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+	margin:0;
+	padding:0;
+	list-style:none;
+	text-decoration:none;
+	color:#454545;
+}
+
+html {
+	width:100%;
+	height:100%;
+}
+
+body {
+	float: left;
+	font-family: 'Pretendard-Regular';
+	width:100%;
+	min-height:fit-content;
+}
+.buttons {
+	display: flex;
+	
+}
+.buttons button {
+	border: none;
+	background: none;
+}
+.comment_table {
+	margin-right: auto;
+}
+.comment_table_tr td {
+	font-family: 'Pretendard-Bold';
+	font-size: 16px;
+	margin-right: auto;
+	float: left;
+	height: 50px;	
+}
+.comment_table_tr td textarea {
+	position: left;
+	padding: 0px;
+	border: 1px solid #F7F5F5;
+    border-radius: 20px;
+    background: #F7F5F5;
+}
+.comment_table_tr td button a {
+	position: relative;
+	cursor: pointer;
+	font-family: 'Cafe24Ssurround';
+	font-size:15px !important;
+	border-radius:30px;
+	border:0px;
+	background:#fddd5f;
+	padding:10px 20px;
+}
+.comment_table_tr td button a:hover {
+	position: relative;
+	cursor: pointer;
+	font-family: 'Cafe24Ssurround';
+	font-size:15px !important;
+	border-radius:30px;
+	border:0px;
+	background:#454545;
+	color:#fddd5f;
+	padding:10px 20px;
+}

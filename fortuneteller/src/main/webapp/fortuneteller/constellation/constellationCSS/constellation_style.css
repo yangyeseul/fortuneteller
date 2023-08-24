@@ -1,0 +1,397 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'Pretendard-Bold';
+    src: url('/fortunetellerfont/Pretendard-Bold.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TheJamsil5Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'HakgyoansimWoojuR';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/HakgyoansimWoojuR.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.constellation_text {
+	font-family: 'Pretendard-Regular';
+	font-size:32px;
+	letter-spacing:-2px;
+	line-height:35px;
+	text-align:center;
+}
+
+.constellation_text > span {
+	font-family: 'Pretendard-Bold';
+	font-weight:900;
+	font-size:32px;
+	letter-spacing:-2px;
+	line-height:35px;
+	background:linear-gradient(to bottom, white 30%, #d4f9ff 30% 70%, white 70%);
+}
+#testBtn{
+    padding-left: 53px;
+    padding-top: 30px;
+    padding-bottom:10px;
+    position: relative;
+     
+}
+#testBtn input[type=button]{
+	height:50px;
+	width:500px;
+	font-size:15px !important;
+	border-radius:10px;
+	background:#421275;
+	 border: 1px solid #421275;
+	 padding:10px 15px;
+	  text-decoration-line: none;
+	  color:#ffffff;
+	  cursor: pointer;
+}
+#testBtn  input[type=button]:hover{
+	height:50px;
+	width:500px;
+	font-size:15px !important;
+	border-radius:10px;
+	background:#6726E0;
+	 border: 1px solid #6726E0;
+	 padding:10px 15px;
+	  text-decoration-line: none;
+	  color:#ffffff;
+	 cursor: pointer;
+}
+#testBtn >a> input[type=button]{
+	font-family: 'TheJamsil5Bold';
+	  font-weight: 1400;
+	   letter-spacing: 6px;
+}
+#hr1{
+	width:90%;
+	height:1px;
+	background-color:#cdcdcd;
+	border: 0;
+	 margin-left : auto;
+  	margin-right : auto;
+}
+#hr2{
+	height:4px;
+	background-color:#cdcdcd;
+	border: 0;
+  	margin-top : 30px;
+}
+.contell_top_wrap {
+	width:37%;
+	background-color:#ffffff;
+	display:flex;
+	justify-content:space-between;
+    margin-left:  476px;
+    margin-bottom: 68px;
+    margin-top: 27px
+}
+p{
+	 font-family: 'HakgyoansimWoojuR';
+	  font-size: 22px;
+}
+.constellText{
+	padding-left: 18px;
+      overflow: hidden;
+      margin:0 auto;
+      width:500px;
+      height:53px;
+       font-family: 'HakgyoansimWoojuR';
+	  letter-spacing: 3px;
+	  line-height: 26px;
+	font-size: 22px;
+	font-weight:500;
+}
+.constellText2{
+	font-weight: 1000;
+	padding-top: 14px;
+	padding-bottom: 30px;
+}
+
+.constellTextImg{
+    padding-bottom: 70px;
+}
+.container {
+      width:300px;
+      padding:20px;
+   }
+   .more {
+  	 height:22%;
+      overflow: none;
+   }
+
+.button::before {
+  content: '...더보기';
+   font-family: 'HakgyoansimWoojuR';
+	  font-size: 18px;
+}
+.button:checked::before {
+  content: '닫기';
+   font-family: 'HakgyoansimWoojuR';
+	  font-size: 18px;
+	  position:relative;
+	bottom:-1px;
+	right:88px;
+	  
+}
+.button {
+	float: right;
+	position:relative;
+	bottom:22px;
+	right:131px;
+  appearance: none;
+  cursor: pointer;
+  color: #cfcfcf;
+}
+.button:hover {
+	float: right;
+	position:relative;
+	bottom:22px;
+	right:131px;
+  appearance: none;
+  cursor: pointer;
+  color: blue;
+}
+.testImgContainer{
+    border: solid 1px #cfcfcf;
+    border-radius: 16px;
+    height: 107px;
+}
+ .testImg> a> img{
+ border-radius: 16px 0px 0px 16px;
+	height: 107px;
+    width: 161px;
+     object-fit: cover;
+}
+.testTitle{
+	position:relative;
+	left: 204px;
+    bottom: 67px;
+   font-family: 'TheJamsil5Bold';
+   font-size: 20px;
+    letter-spacing: 2px;
+}
+.interval{
+	margin: -22px;
+	padding: 0;
+}
+
+/* 로딩 */
+.loader {
+        width: 150px;
+        margin: 95px auto 40px;
+        position: relative;
+    }
+  
+    .loader .loading_1 {
+        position: relative;
+        width: 100%;
+        height: 10px;
+        border: 1px solid #5221BA;
+        border-radius: 10px;
+    }
+  
+    .loader .loading_1:before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 0;
+        height: 100%;
+        background-color: #5221BA;
+      animation: load 5s linear;
+      animation-fill-mode: forwards;
+      border-radius: 10px;
+    }
+  	
+     #loading_2 {
+         padding-top: 18px;
+        position: absolute;
+        width: 100%;
+        top: 10px;
+        color: rgb(114, 114, 114);
+        font-size: 22px;
+        text-align: center;
+        font-family: 'TheJamsil5Bold';
+         letter-spacing: 3px;
+    }
+  
+    @keyframes load {
+        0% {
+            width: 0%;
+        }
+  
+        100% {
+            width: 100%;
+        }
+    }
+
+/* Btn */
+#resultBtn1{
+    position: relative;
+    padding-left: 8px;
+    bottom: 50px;
+}
+#resultBtn2{
+    padding-left: 8px;
+}
+
+#resultBtn1 input[type=button]{
+	height:50px;
+	width:500px;
+	font-size:15px !important;
+	border-radius:10px;
+	background:#cfcfcf;
+	 border: 1px solid #cfcfcf;
+	 padding:10px 15px;
+	  text-decoration-line: none;
+	  color:#A3A3A3;
+ }
+
+#resultBtn1 > a > input[type=button]{
+	  font-family: 'TheJamsil5Bold';
+	  font-weight: 1400;
+	   letter-spacing: 6px;
+}
+
+#resultBtn2 input[type=button]{
+	height:50px;
+	width:500px;
+	font-size:15px !important;
+	border-radius:10px;
+	background:#421275;
+	 border: 1px solid #421275;
+	 padding:10px 15px;
+	  text-decoration-line: none;
+	  color:#ffffff;
+	  cursor: pointer;
+}
+#resultBtn2 input[type=button]:hover{
+	height:50px;
+	width:500px;
+	font-size:15px !important;
+	border-radius:10px;
+	background:#6726E0;
+	 border: 1px solid #6726E0;
+	 padding:10px 15px;
+	  text-decoration-line: none;
+	  color:#ffffff;
+	 cursor: pointer;
+}
+
+#resultBtn2 > a > input[type=button]{
+	  font-family: 'TheJamsil5Bold';
+	  font-weight: 1400;
+	   letter-spacing: 6px;
+	 cursor: pointer;
+}
+
+#image{
+    margin-bottom: 70px;
+    
+/* 	position:relative; */
+	width: 288px;
+    height: 261px;
+   /*  left: 800px;
+    border: 1px solid #7b7b7b;
+    bottom: 42px; */
+}
+#image > img{
+	max-width:100%;
+    object-fit: cover;
+}
+.parents{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+/*result page*/
+
+.resultImg {
+	width: 587px;
+	height: 277px;
+    margin:auto;
+	position: relative;
+	border: 1px solid #7b7b7b;
+}
+
+
+ .testText1{
+	/* background-color: aqua; */
+	font-family: 'HakgyoansimWoojuR';
+	font-size: 22px;
+	line-height: 27px;
+	font-weight:500;
+	width: 600px;
+	height: 508px;
+	margin:auto;
+} 
+.costellName{
+	/* background-color: yellow; */
+	width: 370px;
+    bottom: 17px;
+    position: relative;
+    margin-left: 720px;
+}
+.lucky{
+	  font-family: 'HakgyoansimWoojuR';
+	  font-size: 22px;
+	width: 400px;
+    margin: auto;
+}
+
+.testContent{
+    margin: 30px auto;
+    width: 650px;		
+}
+
+span {
+	font-weight: bold;
+}
+
+.testText2{
+	font-family: 'HakgyoansimWoojuR';
+	font-size: 22px;
+	line-height: 27px;
+	margin-bottom: 76px
+}
+
+footer{ 
+position:fixed; 
+  left:0px; 
+  bottom:0px; 
+  height:60px; 
+  width:100%; 
+  background:#cfcfcf; 
+  }
+  
+footer>div > a > input[type=button]{
+	width: 100px;
+	height: 40px;
+	font-size:15px !important;
+	border-radius:20px;
+	background:#ffffff;
+	 border: 1px solid #ffffff;
+	 padding:10px 15px;
+	  text-decoration-line: none;
+	  cursor: pointer;
+	  font-family: 'TheJamsil5Bold';
+	   letter-spacing: 2px;
+}
+.resultName{
+	position: relative;
+    bottom: 153px;
+    font-family: 'Pretendard-Bold';
+	font-weight:bold;
+	font-size:32px;
+	color: #ffffff;
+	letter-spacing: 3px;
+}
