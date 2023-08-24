@@ -8,6 +8,7 @@
 <link type="text/css" rel="stylesheet" href="/fortuneteller/member/memberCSS/history_style.css">
 </head>
 <body>
+
 	<div class="check">
 		<a href="/fortuneteller/index.jsp?page=mypage_modify.jsp">
 			<button class="button" id="memberModify">회원
@@ -19,5 +20,11 @@
 		</a>
 	</div>
 
+	<div class="historySpace">
+		<jsp:include page="/history/testHistory.jsp" />
+	</div>
+	
+	
+	
 </body>
 </html>
