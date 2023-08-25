@@ -59,6 +59,7 @@
  	margin-top: 100px;
  	margin-top: 25px;
     margin-left: 160px;
+    float: left;
  }
  
  #historySearchForm > select{
@@ -75,28 +76,41 @@
  	border-radius: 20px;
 	height : 35px;
 	border: 1px solid #cdcdcd;
+	align-items:center;
+	text-align:center;
  }
  #historySearchForm > input[type=submit]{
- 	width: 50px;
- 	background:#fddd5f;
+ 	cursor: pointer;
+	font-family: 'Cafe24Ssurround';
+	margin-top:20px;
+	font-size:15px !important;
+	border-radius:30px;
+	background:#fddd5f;
+	padding:10px 20px;
 	border: 1px solid #fddd5f;
-	cursor: pointer;
-	 font-family: 'Pretendard-Bold';
-	 font-weight: bold;
+	height:40px;
  }
  #historySearchForm > input[type=submit]:hover{
- 	width: 50px;
- 	background:#ffad2b;
-	border: 1px solid #ffad2b;
-	cursor: pointer;
-	 font-family: 'Pretendard-Bold';
-	 font-weight: bold;
-	 color:#ffffff;
+ 	cursor: pointer;
+	font-family: 'Cafe24Ssurround';
+	margin-top:20px;
+	font-size:15px !important;
+	border-radius:30px;
+	background:#454545;
+	padding:10px 20px;
+	border: 1px solid #454545;
+	height:40px;
+	color: #fddd5f;
  }
  #historySearchForm > input[type=text]{
  	width: 300px;
  }
  
+ #currnet_page{
+ 	padding: 5px 10px;
+    background: #fddd5f;
+    border-radius: 30px;
+ }
  
  
  

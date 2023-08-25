@@ -1,31 +1,70 @@
 @charset "UTF-8";
+@font-face {
+    font-family: 'Pretendard-Bold';
+    src: url('/fortunetellerfont/Pretendard-Bold.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
 .check{
-	 padding-left: 70px;
     padding-bottom: 40px;
 }
  #memberModify{
-	font-family: 'Pretendard-Bold';
-	color:#fff;
-	width:150px;
-	display: inline-block;
-	height:40px;
+		cursor: pointer;
 	font-size:15px !important;
 	border-radius:30px;
 	background:#454545;
-	 border: 1px solid #454545;
-	 padding:10px 15px;
-	 margin-left: 7px;
-}
- #history{
-	font-family: 'Pretendard-Bold';
-	color:#454545;
-	width:150px;
-	display: inline-block;
+	border: 1px solid #454545;
+	color:#fddd5f;
+	padding:10px 20px;
 	height:40px;
+	width:250px;
+	
+}
+ #memberModify:hover{
+	cursor: pointer;
+	margin-top:20px;
 	font-size:15px !important;
 	border-radius:30px;
 	background:#fddd5f;
-	 border: 1px solid #fddd5f;
-	 padding:10px 15px;
-	 margin-left: 7px;
+	padding:10px 20px;
+	border: 1px solid #fddd5f;
+	height:40px;
+	width:250px;
+}
+
+
+
+ #history{
+	
+	cursor: pointer;
+	margin-top:20px;
+	font-size:15px !important;
+	border-radius:30px;
+	background:#fddd5f;
+	padding:10px 20px;
+	border: 1px solid #fddd5f;
+	height:40px;
+	width:250px;
+}
+#history:hover{
+
+	
+	cursor: pointer;
+	font-size:15px !important;
+	border-radius:30px;
+	background:#454545;
+	border: 1px solid #454545;
+	color:#fddd5f;
+	padding:10px 20px;
+	height:40px;
+	width:250px;
+}
+.historySpace{
+	width: 1000px;
+	margin-left: 290px;
+}
+.historyPaging{
+	width: 200px;
+    margin-left: 335px;
+    margin-top: 515px;
 }

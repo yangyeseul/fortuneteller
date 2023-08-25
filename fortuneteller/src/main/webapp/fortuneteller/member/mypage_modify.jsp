@@ -78,19 +78,19 @@ String gender = daoPro.getGender();
 					</div>
 				</td>
 			</tr>
-			<%if(gender.equals("male")){ %>
+			<%if(gender.equals("남성")){ %>
 			<tr>
 				<td>성별</td>
 				<td>
 					<div class="mb-3">
 						<div class=" row-vh d-flex flex-row justify-content-between">
 							<div class="form_radio_btn">
-								<input id="radio-1" type="radio" name="gender" value="male" checked> 
+								<input id="radio-1" type="radio" name="gender" value="남성" checked> 
 								<label for="radio-1">남성</label>
 							</div>
 
 							<div class="form_radio_btn radio_female">
-								<input id="radio-2" type="radio" name="gender" value="female">
+								<input id="radio-2" type="radio" name="gender" value="여성" onclick="return(false);">
 								<label for="radio-2">여성</label>
 							</div>
 						</div>
@@ -104,12 +104,12 @@ String gender = daoPro.getGender();
 					<div class="mb-3">
 						<div class=" row-vh d-flex flex-row justify-content-between">
 							<div class="form_radio_btn">
-								<input id="radio-1" type="radio" name="gender" value="male"> 
+								<input id="radio-1" type="radio" name="gender" value="남성" onclick="return(false);"> 
 								<label for="radio-1">남성</label>
 							</div>
 
 							<div class="form_radio_btn radio_female">
-								<input id="radio-2" type="radio" name="gender" value="female" checked>
+								<input id="radio-2" type="radio" name="gender" value="여성" checked>
 								<label for="radio-2">여성</label>
 							</div>
 						</div>

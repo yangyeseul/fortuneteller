@@ -51,7 +51,7 @@
 <head>
 <meta charset="UTF-8">
 <title>테스트 내역</title>
-<link type="text/css" rel="stylesheet" href="/fortuneteller/constellation/testHistory.css">
+<link type="text/css" rel="stylesheet" href="/history/testHistory.css">
 </head>
 <body>
 
@@ -74,7 +74,7 @@
 		</tr>
 		<tr >
 			<td id="format"><a href="<%=vo.getTestPage()%>"><%=simpleFormat.format(vo.getRegdate()) %></a></td>
-			<td id="historyDelete"><input type="button" value="삭제" onclick="document.location.href='/fortuneteller/constellation/historyDelete.jsp?num=<%=vo.getNum()%>&pageNum=<%=pageNum%>'"></td>
+			<td id="historyDelete"><input type="button" value="삭제" onclick="document.location.href='/history/historyDelete.jsp?num=<%=vo.getNum()%>&pageNum=<%=pageNum%>'"></td>
 		</tr>
 		
 	</table>	
@@ -115,7 +115,7 @@
 	 	for(int i =startPage; i<=endPage; i++){
 	 		if(text==null){
 	%>
-<a href="/fortuneteller/index.jsp?page=history.jsp&pageNum=<%=i%>">&nbsp;<%=i %>&nbsp;</a>
+<a href="/fortuneteller/index.jsp?page=history.jsp&pageNum=<%=i%>" id="current_page">&nbsp;<%=i %>&nbsp;</a>
 
 <%}else{ %>
 <a href="/fortuneteller/index.jsp?page=history.jsp&pageNum=<%=i%>&searchWhat=<%=what%>&searchText=<%=text%>">&nbsp;<%=i %>&nbsp;</a>
@@ -145,7 +145,7 @@
 			<!-- <option value="full" align="center">전체보기</option> -->
 			<option value="testName" align="center">테스트 이름</option>
 			<!-- <option value="regdate"  align="center">날짜</option> -->
-		</select>&nbsp; <input type="text" name="searchText" "> &nbsp;<input type="submit" value="찾기">
+		</select>&nbsp; <input type="text" name="searchText" "> &nbsp;<input type="submit" value="Search">
 	</form>
 	</div>
 	

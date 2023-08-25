@@ -11,12 +11,10 @@
 
 	<div class="check">
 		<a href="/fortuneteller/index.jsp?page=mypage_modify.jsp">
-			<button class="button" id="memberModify">회원
-				정보 수정</button>
+			<button class="button" id="memberModify">회원정보 수정</button>
 		</a> &nbsp;&nbsp;&nbsp; <a
 			href="/fortuneteller/index.jsp?page=history.jsp">
-			<button class="button" id="history">이전
-				결과 확인</button>
+			<button class="button" id="history">이전결과 확인</button>
 		</a>
 	</div>
 
