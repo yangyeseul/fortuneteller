@@ -62,9 +62,9 @@
 	<br>
 	<div class="interval">
 		<div class="testImgContainer">
-			<div class="testImg"><a href="#"><img src="/fortuneteller/img/slide01.png"></a></div>
+			<div class="testImg"><a href="/fortuneteller/index.jsp?page=ootd.jsp"><img src="/fortuneteller/img/slide01.png"></a></div>
 		</div>
-			<div class="testTitle"><a href="#">깜박사의 오늘의 행운룩</a></div>
+			<div class="testTitle"><a href="/fortuneteller/index.jsp?page=ootd.jsp">깜박사의 오늘의 행운룩</a></div>
 	</div>
 		
 	<div class="interval">
