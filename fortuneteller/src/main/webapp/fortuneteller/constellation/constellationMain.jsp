@@ -20,12 +20,14 @@
 <link type="text/css" rel="stylesheet" href="/fortuneteller/constellation/constellationCSS/constellation_style.css">
 </head>
 <body>
-<%-- <%if(id==null){ %>
-<script type="text/javascript">
-	alert("로그인이 필요한 서비스 입니다.");
-	window.location='/fortuneteller/index.jsp';
-</script>
-<%}else{ %> --%>
+
+<%if(id==null){ %>
+
+<jsp:include page="/fortuneteller/member/login.jsp" >
+	<jsp:param value="constellationMain.jsp" name="page"/>
+</jsp:include>
+
+<%}else{ %>
 <div class="constellTextImg">
 
 	<div class="constellation_text">이번달 나의 <span>별자리 운세</span></div><br><br>
@@ -60,9 +62,9 @@
 	<br>
 	<div class="interval">
 		<div class="testImgContainer">
-			<div class="testImg"><a href="#"><img src="/fortuneteller/img/slide01.png"></a></div>
+			<div class="testImg"><a href="/fortuneteller/index.jsp?page=ootd.jsp"><img src="/fortuneteller/img/slide01.png"></a></div>
 		</div>
-			<div class="testTitle"><a href="#">깜박사의 오늘의 행운룩</a></div>
+			<div class="testTitle"><a href="/fortuneteller/index.jsp?page=ootd.jsp">깜박사의 오늘의 행운룩</a></div>
 	</div>
 		
 	<div class="interval">
@@ -88,7 +90,7 @@
 	}
 	
 </script>
-<%-- <%} %> --%>
+<%} %>
 </body>
 
 </html>
