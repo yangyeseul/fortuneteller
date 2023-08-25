@@ -107,7 +107,7 @@ String gender = daoPro.getGender();
 								<input id="radio-1" type="radio" name="gender" value="남자" onclick="return(false);"> 
 								<label for="radio-1">남성</label>
 							</div>
-
+<!--아니  -->
 							<div class="form_radio_btn radio_female">
 								<input id="radio-2" type="radio" name="gender" value="여자" checked>
 								<label for="radio-2">여성</label>
