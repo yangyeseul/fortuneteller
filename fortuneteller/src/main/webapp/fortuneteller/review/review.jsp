@@ -2,7 +2,7 @@
 <%@ page import="com.review.ReviewDAO" %>
 <%@ page import="com.review.ReviewVO" %>
 <%@ page import="java.util.List" %>
-<%@ page import="java.text.SimpleDateFormat" %>
+<%@ page import="java.text.SimpleDateFormat" %> 
 
 <%! 
 // 한 페이지에 보여줄 게시물 수를 지정
@@ -32,6 +32,11 @@ int searchCount = 0;
 // 검색 값 가져오기
 String searchCondition = request.getParameter("searchCondition");
 String searchKeyword = request.getParameter("searchKeyword");
+
+// 단어 단위로 받기 위해서..?? ㅇㅕ튼 무조건 설정해줘야된다고함..
+if(searchKeyword != null) {
+	searchKeyword = new String(searchKeyword.getBytes("utf-8"), "utf-8");	
+}
 
 List<ReviewVO> articleList = null;
 List<ReviewVO> searchArticleList = null;
@@ -67,11 +72,11 @@ if(searchCount > 0) {
 	
 	<div class="list_button_write">
 		<select name="category" id="category" class="select_category" onchange="location.href=this.value">
-			<option name="category" value="/fortuneteller/index.jsp?page=review.jsp" selected>모두 보기: <%= count %></option>
-			<option name="category" value="/fortuneteller/index.jsp?page=reviewOotd.jsp">오늘의 행운룩</option>
-			<option name="category" value="/fortuneteller/index.jsp?page=reviewCrystal.jsp">수정구슬</option>
-			<option name="category" value="/fortuneteller/index.jsp?page=reviewStarsign.jsp">별자리 운세</option>
-			<option name="category" value="/fortuneteller/index.jsp?page=reviewZodiac.jsp">띠 운세</option>
+			<option value="/fortuneteller/index.jsp?page=review.jsp" selected>모두 보기: <%= count %></option>
+			<option value="/fortuneteller/index.jsp?page=reviewOotd.jsp">오늘의 행운룩</option>
+			<option value="/fortuneteller/index.jsp?page=reviewCrystal.jsp">수정구슬</option>
+			<option value="/fortuneteller/index.jsp?page=reviewStarsign.jsp">별자리 운세</option>
+			<option value="/fortuneteller/index.jsp?page=reviewZodiac.jsp">띠 운세</option>
 		</select>
 		
 		<%
@@ -85,7 +90,7 @@ if(searchCount > 0) {
 	</div>
 	
 	<div class="list_container">
-		<form class="list_form">
+		<div class="list_form">
 			<table class="list_table_03">
 			<% if(count == 0) { // 글이 없을 때 %>
 				<tr height="40" colspan="6">
@@ -190,12 +195,15 @@ if(searchCount > 0) {
 				<tr height="40"  colspan="6">
 					<td align="center" height="40"><div class="nocontents">검색어에 해당하는 글이 없습니다.</td>
 				</tr>
-				<%  } %>
+				<%  
+					}
+				} 
+				%>
 			</table>
-			<% } %>
+			
 			<div class="list_bottom_div">
 	<% 
-		if(count > 0 && searchCount == 0 && searchKeyword == null) { // 페이징 처리
+		if(count > 0 && searchCount == 0 && searchKeyword == null) { // 페이징 처리(검색x)
 			int pageBlock = 5; // 페이지 목록 넘기는 버튼 갯수
 			int imsi = count % pageSize == 0 ? 0: 1; // 0이면 페이지가 딱 떨어짐 1이면 남은게 다음페이지로 넘어감
 			int pageCount = count / pageSize + imsi;
@@ -262,13 +270,13 @@ if(searchCount > 0) {
 		}
 		%>
 			</div>
-		</form>
+		</div>
 		
 		<form method="post" class="list_form2" name="searchForm">
 			<select name="searchCondition" class="select">
-				<option name="searchCondition" value="writer">작성자</option>
-				<option name="searchCondition" value="title">제목</option>
-				<option name="searchCondition" value="content">내용</option>
+				<option value="writer">작성자</option>
+				<option value="title">제목</option>
+				<option value="content">내용</option>
 			</select>
 			&nbsp;&nbsp;
 			<input type="text" class="searchbar" name="searchKeyword" align="center">&nbsp;&nbsp;

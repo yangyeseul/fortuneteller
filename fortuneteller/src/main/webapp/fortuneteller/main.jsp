@@ -14,7 +14,7 @@
 	</div>
 	
 	<ul class="main_slide_hashtag">
-		<li><a href="#">#오늘의행운룩</a></li>
+		<li><a href="/fortuneteller/index.jsp?page=ootdTest.jsp">#오늘의행운룩</a></li>
 		<li><a href="#">#수정구슬</a></li>
 		<li><a href="#">#별자리운세</a></li>
 		<li><a href="#">#띠별운세</a></li>
@@ -23,7 +23,7 @@
 	<div class="main_wrap">
 		<div class="main_content">
 			<div class="main_slide">
-				<a href="#"><img src="/fortuneteller/img/slide01.png"></a>
+				<a href="/fortuneteller/index.jsp?page=ootdTest.jsp"><img src="/fortuneteller/img/slide01.png"></a>
 			</div>
 
 			<div class="main_slide">
@@ -31,7 +31,7 @@
 			</div>
 			
 			<div class="main_slide">
-				<a href="#"><img src="/fortuneteller/img/slide03.png"></a>
+				<a href="/fortuneteller/index.jsp?page=constellationMain.jsp"><img src="/fortuneteller/constellation/constellationImg/constellationMainImage.png"></a>
 			</div>
 			
 			<div class="main_slide">

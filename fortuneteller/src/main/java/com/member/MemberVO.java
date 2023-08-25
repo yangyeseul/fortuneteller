@@ -10,6 +10,7 @@ public class MemberVO {
 	private int year;
 	private int month;
 	private int day;
+	
 	public String getId() {
 		return id;
 	}
@@ -58,8 +59,5 @@ public class MemberVO {
 	public void setDay(int day) {
 		this.day = day;
 	}
-	
-	
-	
 	
 }

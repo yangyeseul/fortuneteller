@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
 <meta charset="UTF-8">
 
 <%
@@ -46,8 +47,60 @@
 		pagefile = "/fortuneteller/review/" + pagefile;
 	} else if(pagefile.contains("reviewZodiac.jsp")) {
 		pagefile = "/fortuneteller/review/" + pagefile;
+	} else if(pagefile.contains("announceBoardList.jsp")){ // 공지사항 관련
+		pagefile = "/fortuneteller/announceBoard/" + pagefile;
+	} else if(pagefile.contains("announceBoard.jsp")){
+		pagefile = "/fortuneteller/announceBoard/" + pagefile;
+	} else if(pagefile.contains("announceWriteForm.jsp")){
+		pagefile = "/fortuneteller/announceBoard/" + pagefile;
+	} else if(pagefile.contains("announceWriteProc.jsp")){
+		pagefile = "/fortuneteller/announceBoard/" + pagefile;
+	} else if(pagefile.contains("announceDeleteProc.jsp")){
+		pagefile = "/fortuneteller/announceBoard/" + pagefile;
+	} else if(pagefile.contains("announceUpdateForm.jsp")){
+		pagefile = "/fortuneteller/announceBoard/" + pagefile;
+	} else if(pagefile.contains("announceUpdateProc.jsp")){
+		pagefile = "/fortuneteller/announceBoard/" + pagefile;
+	} else if(pagefile.equals("qnaBoardList.jsp")){ // qna 관련
+		pagefile = "/fortuneteller/qnaBoard/" + pagefile;
+	} else if(pagefile.equals("qnaBoard.jsp")){
+		pagefile = "/fortuneteller/qnaBoard/" + pagefile;
+	} else if(pagefile.equals("qnaUpdateForm.jsp")){
+		pagefile = "/fortuneteller/qnaBoard/" + pagefile;
+	} else if(pagefile.equals("qnaUpdateProc.jsp")){
+		pagefile = "/fortuneteller/qnaBoard/" + pagefile;
+	} else if(pagefile.equals("qnaWriteForm.jsp")){
+		pagefile = "/fortuneteller/qnaBoard/" + pagefile;
+	} else if(pagefile.equals("qnaWriteProc.jsp")){
+		pagefile = "/fortuneteller/qnaBoard/" + pagefile;
+	} else if(pagefile.equals("qnaDeleteProc.jsp")){
+		pagefile = "/fortuneteller/qnaBoard/" + pagefile;
+	} else if(pagefile.equals("qnaComProc.jsp")){
+		pagefile = "/fortuneteller/qnaBoard/" + pagefile;
 	} else if(pagefile.equals("ootd.jsp")) { // 오늘의 행운룩 관련
 		pagefile = "/fortuneteller/ootd/" + pagefile;
+	} else if(pagefile.contains("ootdMain.jsp")) { 
+		pagefile = "/fortuneteller/ootd/" + pagefile;
+	} else if(pagefile.contains("ootdTest.jsp")) { 
+		pagefile = "/fortuneteller/ootd/" + pagefile;
+	} else if(pagefile.contains("ootdResult.jsp")) { 
+		pagefile = "/fortuneteller/ootd/" + pagefile;
+	} else if(pagefile.equals("constellationMain.jsp")) { // 별자리 운세 관련
+		pagefile ="/fortuneteller/constellation/" + pagefile;
+	} else if(pagefile.equals("constellationCheck.jsp")) { 
+		pagefile ="/fortuneteller/constellation/" + pagefile;
+	} else if(pagefile.equals("constellationTest.jsp")) { 
+		pagefile ="/fortuneteller/constellation/" + pagefile;
+	} else if(pagefile.equals("constellationTestResult.jsp")) { 
+		pagefile ="/fortuneteller/constellation/" + pagefile;
+	} else if(pagefile.equals("ZodiacTestView.jsp")){ // 띠별 운세
+		pagefile = "/fortuneteller/zodiac/" + pagefile;
+	} else if(pagefile.equals("ZodiacCheck.jsp")){
+		pagefile = "/fortuneteller/zodiac/" + pagefile;
+	} else if(pagefile.equals("todayResult.jsp")){
+		pagefile = "/fortuneteller/zodiac/" + pagefile;
+	} else if(pagefile.equals("tomorrowResult.jsp")){
+		pagefile = "/fortuneteller/zodiac/" + pagefile;
 	}
 %>
 

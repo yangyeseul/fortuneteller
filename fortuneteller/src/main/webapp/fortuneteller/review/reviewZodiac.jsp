@@ -3,7 +3,7 @@
 <%@ page import="com.review.ReviewVO" %>
 <%@ page import="java.util.List" %>
 <%@ page import="java.text.SimpleDateFormat" %>
-
+ 
 <%! 
 // 한 페이지에 보여줄 게시물 수를 지정
 int pageSize = 10;
@@ -73,11 +73,11 @@ if(searchCount > 0) {
 	
 	<div class="list_button_write">
 		<select name="category" id="category" class="select_category" onchange="location.href=this.value">
-			<option name="category" value="/fortuneteller/index.jsp?page=review.jsp">모두 보기: <%= totalCount %></option>
-			<option name="category" value="/fortuneteller/index.jsp?page=reviewOotd.jsp">오늘의 행운룩</option>
-			<option name="category" value="/fortuneteller/index.jsp?page=reviewCrystal.jsp">수정구슬</option>
-			<option name="category" value="/fortuneteller/index.jsp?page=reviewStarsign.jsp">별자리 운세</option>
-			<option name="category" value="/fortuneteller/index.jsp?page=reviewZodiac.jsp" selected>띠 운세</option>
+			<option value="/fortuneteller/index.jsp?page=review.jsp">모두 보기: <%= totalCount %></option>
+			<option value="/fortuneteller/index.jsp?page=reviewOotd.jsp">오늘의 행운룩</option>
+			<option value="/fortuneteller/index.jsp?page=reviewCrystal.jsp">수정구슬</option>
+			<option value="/fortuneteller/index.jsp?page=reviewStarsign.jsp">별자리 운세</option>
+			<option value="/fortuneteller/index.jsp?page=reviewZodiac.jsp" selected>띠 운세</option>
 		</select>
 		
 		<%
@@ -91,11 +91,11 @@ if(searchCount > 0) {
 	</div>
 	
 	<div class="list_container">
-		<form class="list_form">
+		<div class="list_form">
 			<table class="list_table_03">
 			<% if(count == 0) { // 글이 없을 때 %>
 				<tr height="40" colspan="6">
-					<td align="center" height="40"><div class="nocontents">게시판에 저장된 글이 없습니다.</td>
+					<td align="center" height="40"><div class="nocontents">게시판에 저장된 글이 없습니다.</div></td>
 				</tr>
 			<% } else { // 글이 있을 때 
 					if(count > 0 && searchCount == 0 && searchKeyword == null) {
@@ -194,11 +194,14 @@ if(searchCount > 0) {
 					} else { // 검색한 글이 없으면
 				%>
 				<tr height="40"  colspan="6">
-					<td align="center" height="40"><div class="nocontents">검색어에 해당하는 글이 없습니다.</td>
+					<td align="center" height="40"><div class="nocontents">검색어에 해당하는 글이 없습니다.</div></td>
 				</tr>
-				<%  } %>
+				<%  
+					}
+				} 
+				%>
 			</table>
-			<% } %>
+			
 			<div class="list_bottom_div">
 	<% 
 		if(count > 0 && searchCount == 0 && searchKeyword == null) { // 페이징 처리
@@ -268,13 +271,13 @@ if(searchCount > 0) {
 		}
 		%>
 			</div>
-		</form>
+		</div>
 		
 		<form method="post" class="list_form2" name="searchForm">
 			<select name="searchCondition" class="select">
-				<option name="searchCondition" value="writer">작성자</option>
-				<option name="searchCondition" value="title">제목</option>
-				<option name="searchCondition" value="content">내용</option>
+				<option value="writer">작성자</option>
+				<option value="title">제목</option>
+				<option value="content">내용</option>
 			</select>
 			&nbsp;&nbsp;
 			<input type="text" class="searchbar" name="searchKeyword" align="center">&nbsp;&nbsp;

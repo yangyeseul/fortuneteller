@@ -14,17 +14,17 @@
 			<ul>
 				<li><a href="/fortuneteller/index.jsp?page=ootd.jsp">깜박사가 알려주는 오늘의 행운룩</a></li>
 				<li><a href="#">수정구슬에게 물어봐</a></li>
-				<li><a href="#">이번달 나의 별자리 운세는?</a></li>
-				<li><a href="#">띠로 보는 나의 운세</a></li>
+				<li><a href="/fortuneteller/index.jsp?page=constellationMain.jsp">이번달 나의 별자리 운세는?</a></li>
+				<li><a href="/fortuneteller/index.jsp?page=ZodiacTestView.jsp">띠로 보는 나의 운세</a></li>
 			</ul>
 		</div>
 		
 		<div class="nav_board">
 			<div class="nav_title">BOARD</div>
 			<ul>
-				<li><a href="#">공지사항</a></li>
-				<li><a href="#">Q & A</a></li>
-				<li><a href="/fortuneteller/index.jsp?page=review.jsp?pageNum=1">테스트 리뷰</a></li>
+				<li><a href="/fortuneteller/index.jsp?page=announceBoardList.jsp">공지사항</a></li>
+				<li><a href="/fortuneteller/index.jsp?page=qnaBoardList.jsp">Q & A</a></li>
+				<li><a href="/fortuneteller/index.jsp?page=review.jsp">테스트 리뷰</a></li>
 			</ul>
 		</div>
 		

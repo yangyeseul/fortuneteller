@@ -23,6 +23,9 @@ public class ReviewDAO {
 	}
 	
 	
+	// 사용자 이름을 불러오는 메소드
+	
+	
 	// 글쓰기 폼에서 넘어온 데이터를 실제 데이터베이스에 넣어줄 메소드
 	public void insertArticle(ReviewVO article) {
 		

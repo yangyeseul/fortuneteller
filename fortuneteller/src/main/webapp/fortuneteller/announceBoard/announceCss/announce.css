@@ -1,0 +1,449 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('/fortunetellerfont/Pretendard-Regular.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Pretendard-Bold';
+    src: url('/fortunetellerfont/Pretendard-Bold.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Pretendard-SemiBold';
+    src: url('/fortunetellerfont/Pretendard-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Cafe24Ssurround';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+	margin:0;
+	padding:0;
+	list-style:none;
+	text-decoration:none;
+	color:#454545;
+}
+
+html {
+	width:100%;
+	height:100%;
+}
+
+body {
+	font-family: 'Pretendard-Regular';
+	width:100%;
+	min-height:fit-content;
+}
+.content a:hover {
+	font-family: 'Pretendard-Bold';
+	font-weight: 900;
+}
+
+.buttons {
+	margin-right: 50px;
+	width: 180px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.buttons button {
+	border: none;
+	background: none;
+}
+
+.buttons button a {
+	font-size: 15px !important;
+	border-radius: 30px;
+	background: #fddd5f;
+	padding: 10px 20px;
+}
+
+.buttons button a:hover {
+	font-size: 15px !important;
+	border-radius: 30px;
+	background: #ffad2b;
+	padding: 10px 20px;
+}
+.notice_title {
+	text-align:center;
+}
+.notice_title span {
+	font-family: 'Pretendard-Bold';
+	font-weight:900;
+	letter-spacing:-4px;
+	font-size:32px;
+	line-height:35px;
+	background:linear-gradient(to bottom, white 30%, #d4f9ff 30% 70%, white 70%);
+}
+
+/* 밑에서부터는 내가 수정한 거~~~~~~~~~~~~~~ */
+table {
+	font-family: 'Pretendard-Bold';
+	font-size: 16px;
+	letter-spacing: -1px;
+	table-layout:fixed;
+	white-space : nowrap;
+	border-collapse: collapse;
+}
+
+td {
+	word-break:break-all;
+}
+
+/* pre 안 자동 줄바꿈 */
+pre {
+	font-family: 'Pretendard-Bold';
+	font-size: 16px;
+	letter-spacing: -1px;
+	white-space: pre-wrap;       /* css-3 */
+	white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+	white-space: -pre-wrap;      /* Opera 4-6 */
+	white-space: -o-pre-wrap;    /* Opera 7 */
+	word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+
+
+/* review.jsp */
+option {
+	font-family: 'Pretendard-Bold';
+	font-size: 12px;
+	letter-spacing: -3px;
+}
+
+.list_container {
+	margin: 0 auto;
+	width: 800px;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+	margin-top: 15px;
+}
+
+.list_form {
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.list_title {
+	text-align:center;
+}
+
+.list_title p {
+	font-size: 26px !important;
+}
+
+.list_write {
+	font-family: 'Pretendard-Bold';
+	font-weight: 900;
+	font-size: 16px;
+	letter-spacing: -1px;
+	width: 770px;
+	margin: 0 auto;
+	display:flex;
+	justify-content:space-between;
+	padding: 0 15px;
+	margin-top: 20px;
+}
+
+.nocontents {
+	font-family: 'Pretendard-Bold';
+	font-size: 16px;
+	letter-spacing: -1px;
+	margin-top: 40px;
+}
+
+.list_table_03 {
+	height:35px;
+	border-bottom: 1px solid #eee;
+}
+
+.list_date, .list_category {
+	border-bottom: 1px solid #eee;
+	font-size: 11px !important;
+}
+
+.list_page {
+	cursor: pointer;
+	margin: 20px 0;
+}
+
+.list_form2 {
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+}
+
+.list_form2 input {
+	margin: 0;
+}
+
+.select {
+	width : 85px;
+    height: 40px;
+    border: 1px solid #F7F5F5;
+    border-radius: 30px;
+    position: relative;
+    background: #F7F5F5;
+    text-align: center;
+}
+
+.select_category {
+	width : 120px;
+    height: 40px;
+    border: 1px solid #F7F5F5;
+    border-radius: 30px;
+    position: relative;
+    background: #F7F5F5;
+    text-align: center;
+}
+
+.select_category_write {
+	width : 400px;
+    height: 40px;
+    border: 1px solid #F7F5F5;
+    border-radius: 30px;
+    position: relative;
+    background: #F7F5F5;
+    text-align: center;
+}
+
+.list_form2 > .searchbar {
+	width : 200px;
+    height: 40px;
+	border: 1px solid #F7F5F5;
+    border-radius: 30px;
+    position: relative;
+    background: #F7F5F5;
+}
+
+.searchbutton {
+	cursor: pointer;
+	font-family: 'Cafe24Ssurround';
+	margin-top:20px;
+	font-size:15px !important;
+	border-radius:30px;
+	background:#fddd5f;
+	padding:10px 20px;
+	border: 1px solid #fddd5f;
+	height:40px;
+}
+
+.searchbutton:hover {
+	cursor: pointer;
+	color: #fddd5f;
+	font-family: 'Cafe24Ssurround';
+	font-size:15px !important;
+	border-radius:30px;
+	background:#454545;
+	padding:10px 20px;
+	border: 1px solid #454545;
+}
+
+.list_write a {
+	font-family: 'Cafe24Ssurround';
+	font-size:15px !important;
+	border-radius:30px;
+	background:#fddd5f;
+	padding:10px 20px;
+	border: 1px solid #fddd5f;
+}
+
+.list_write a:hover {
+	color: #fddd5f;
+	font-family: 'Cafe24Ssurround';
+	font-size:15px !important;
+	border-radius:30px;
+	background:#454545;
+	padding:10px 20px;
+	border: 1px solid #454545;
+}
+
+
+/* content.jsp, reviewWriteForm.jsp, reviewUpdateForm.jsp */
+.review_form {
+	width:100%;
+	margin: 0 auto;
+}
+
+.review_div {
+	margin: 0 auto;
+	width: 500px;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+	margin-top: 30px;
+}
+
+.review_table {
+	width: 100%;
+}
+
+.review_table2 {
+	width: 100%;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+
+.review_table_tr td {
+	height: 50px;	
+}
+
+.review_table_tr_content {
+	height: 50px;
+	border-bottom: 1px solid #F7F5F5;
+}
+
+.review_table_tr_content:last-child {
+	border: 0px ;
+}
+
+.review_table_tr_content td {
+	height: 50px;	
+}
+
+.review_table_tr td input {
+	padding: 0 20px;
+	width : 360px;
+    height: 40px;
+	border: 1px solid #F7F5F5;
+    border-radius: 30px;
+    position: relative;
+    background: #F7F5F5;
+}
+
+.review_table_tr td textarea {
+	padding: 20px;
+	width : 355px;
+	border: 1px solid #F7F5F5;
+    border-radius: 20px;
+    background: #F7F5F5;
+}
+
+.review_table2_tr td input {
+	cursor: pointer;
+	font-family: 'Cafe24Ssurround';
+	font-size:15px !important;
+	border-radius:30px;
+	border:0px;
+	background:#fddd5f;
+	padding:10px 20px;
+}
+
+.review_table2_tr td input:hover {
+	cursor: pointer;
+	font-family: 'Cafe24Ssurround';
+	font-size:15px !important;
+	border-radius:30px;
+	border:0px;
+	background:#454545;
+	color:#fddd5f;
+	padding:10px 20px;
+}
+.review_table2_tr td button a {
+	position: relative;
+	top: 400px;
+	cursor: pointer;
+	font-family: 'Cafe24Ssurround';
+	font-size:15px !important;
+	border-radius:30px;
+	border:0px;
+	background:#fddd5f;
+	padding:10px 20px;
+}
+
+.review_table2_tr td button a:hover {
+	position: relative;
+	top: 400px;
+	cursor: pointer;
+	font-family: 'Cafe24Ssurround';
+	font-size:15px !important;
+	border-radius:30px;
+	border:0px;
+	background:#454545;
+	color:#fddd5f;
+	padding:10px 20px;
+}
+/* deleteForm.jsp */
+.deleteForm_form {
+	width:800px;
+	margin: 0 auto;
+	text-align:center;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+}
+
+.deleteForm_text {
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Pretendard-Bold';
+	font-size: 16px;
+	letter-spacing: -1px;
+	height:50px;
+}
+
+.deleteForm_password_input {
+	text-align: center;
+	width : 250px;
+    height: 30px;
+	border: 0px;
+    border-radius: 30px;
+    position: relative;
+    background: #F7F5F5;
+}
+
+.deleteForm_password {
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Pretendard-Bold';
+	height:50px;
+}
+
+.deleteForm_buttons {
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	height:50px;
+}
+
+.deleteForm_buttons input {
+	cursor: pointer;
+	font-family: 'Cafe24Ssurround';
+	font-size:15px !important;
+	border-radius:30px;
+	border:0px;
+	background:#fddd5f;
+	padding:10px 20px;
+}
+
+.deleteForm_buttons input:hover {
+	cursor: pointer;
+	font-family: 'Cafe24Ssurround';
+	font-size:15px !important;
+	border-radius:30px;
+	border:0px;
+	background:#454545;
+	color:#fddd5f;
+	padding:10px 20px;
+}
