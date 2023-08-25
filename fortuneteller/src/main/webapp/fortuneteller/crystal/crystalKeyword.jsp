@@ -1,0 +1,104 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
+<%-- <%@ page import="com.member.MemberDAO" %> 
+<%@ page import="com.member.MemberVO" %>    
+
+<jsp:useBean id="dao" class="com.member.MemberDAO"/>
+<jsp:useBean id="vo" class="com.member.MemberVO">
+<jsp:setProperty property="*" name="vo"/>
+</jsp:useBean>
+ --%>
+<%--
+	<%
+	request.setCharacterEncoding("utf-8");
+	String id=(String) session.getAttribute("loginID");
+	System.out.println(id);
+%>
+--%>
+    
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<link type="text/css" rel="stylesheet" href="/fortuneteller/crystal/crystalCSS/crystal_style.css">
+</head>
+<body>
+		
+
+		<div class="crystal_text" align="center"><span>수정구슬에게 물어봐</span></div><br><br>
+
+
+			<img align="center" width="550" src="/fortuneteller/crystal/crystalImg/crystal_Background.png"><br><br>
+			
+					
+			<div class="keyword0">
+			<img align="center" width="550" src="/fortuneteller/crystal/crystalImg/crystal_keyword0.png"><br><br>
+			</div>
+			
+
+			<div class="keyword_effect">
+
+
+				<div class="keyword1">
+				<a href="/fortuneteller/index.jsp?page=crystalLoading.jsp">
+				<input type="image" width="150" src="/fortuneteller/crystal/crystalImg/crystal_keyword1.png">
+				</a><br><br>
+				</div>
+			
+				<div class="keyword2">
+				<a href="/fortuneteller/index.jsp?page=crystalLoading.jsp">
+				<input type="image" width="150" src="/fortuneteller/crystal/crystalImg/crystal_keyword2.png">
+				</a><br><br>
+				</div>
+		
+				<div class="keyword3">
+				<a href="/fortuneteller/index.jsp?page=crystalLoading.jsp">
+				<input type="image" width="150" src="/fortuneteller/crystal/crystalImg/crystal_keyword3.png">
+				</a><br><br>
+				</div>
+		
+				<div class="keyword4">
+				<a href="/fortuneteller/index.jsp?page=crystalLoading.jsp">
+				<input type="image" width="150" src="/fortuneteller/crystal/crystalImg/crystal_keyword4.png">
+				</a><br><br>
+				</div>	
+			
+				<div class="keyword5">
+				<a href="/fortuneteller/index.jsp?page=crystalLoading.jsp">
+				<input type="image" width="150" src="/fortuneteller/crystal/crystalImg/crystal_keyword5.png">
+				</a><br><br>
+				</div>
+		
+				<div class="keyword6">
+				<a href="/fortuneteller/index.jsp?page=crystalLoading.jsp">
+				<input type="image" width="150" src="/fortuneteller/crystal/crystalImg/crystal_keyword6.png">
+				</a><br><br>
+				</div>
+			
+				<div class="keyword7">
+				<a href="/fortuneteller/index.jsp?page=crystalLoading.jsp">
+				<input type="image" width="150" src="/fortuneteller/crystal/crystalImg/crystal_keyword7.png">
+				</a><br><br>
+				</div>
+			
+				<div class="keyword8">
+				<a href="/fortuneteller/index.jsp?page=crystalLoading.jsp">
+				<input type="image" width="150" src="/fortuneteller/crystal/crystalImg/crystal_keyword8.png">
+				</a><br><br>
+				</div>
+
+
+			</div>	
+			
+			
+				<div class="keyword9">
+				<a href="/fortuneteller/index.jsp?page=crystalLoading.jsp">
+				<input type="image" width="80%" src="/fortuneteller/crystal/crystalImg/crystal_keyword9.png">
+				</a><br><br>
+				</div>
+			
+	
+</body>
+</html>
