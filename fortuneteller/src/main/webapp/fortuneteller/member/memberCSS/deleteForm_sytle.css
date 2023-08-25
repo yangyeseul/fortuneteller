@@ -5,6 +5,8 @@
     		border-radius: 30px;
     		background: #F7F5F5;
 			border:none;
+			align-items:center;
+			text-align:center;
 }
 
 .form input[type=button]{
@@ -17,6 +19,7 @@
 	 padding:10px 15px;
 	  text-decoration-line: none;
 	  color:#454545;
+	  cursor: pointer;
 	 
 }
 .form input[type=button]:hover{
@@ -29,6 +32,7 @@
 	 padding:10px 15px;
 	  text-decoration-line: none;
 	  color:#fddd5f;
+	  cursor: pointer;
 	 
 }
 .delete_text {
@@ -54,4 +58,11 @@ table{
 #deleteBtn{
     padding-left: 131px;
     padding-top: 18px;
+}
+#deleteForm{
+	margin-left: 245px;
+}
+#deleteBtn>input[type=button]{
+	font-family: 'Cafe24Ssurround';
+	
 }

@@ -1,9 +1,9 @@
 <%@page import="java.sql.Timestamp"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <jsp:useBean id="dao" class="com.constellation.ConstellationDAO"></jsp:useBean>
+    <jsp:useBean id="dao" class="com.history.HistoryDAO"></jsp:useBean>
     
-    <jsp:useBean id="vo" class="com.constellation.InfoVO"> 
+    <jsp:useBean id="vo" class="com.history.InfoVO"> 
     <jsp:setProperty property="*" name="vo"/>
     </jsp:useBean>
     
@@ -37,11 +37,7 @@
   	 vo.setImage(imgSrc);
   	 vo.setTestName(testName);
   	 vo.setTestPage(testPage);
-  	 
-  	 
-  	 
   	 dao.insertInfo(vo);
-  	 
   	 response.sendRedirect("/fortuneteller/constellation/constellationTest.jsp");
 }
 %>
