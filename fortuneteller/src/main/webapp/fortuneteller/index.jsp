@@ -79,6 +79,8 @@
 		pagefile = "/fortuneteller/qnaBoard/" + pagefile;
 	} else if(pagefile.equals("ootd.jsp")) { // 오늘의 행운룩 관련
 		pagefile = "/fortuneteller/ootd/" + pagefile;
+	} else if(pagefile.contains("ootdMain.jsp")) { 
+		pagefile = "/fortuneteller/ootd/" + pagefile;
 	} else if(pagefile.contains("ootdTest.jsp")) { 
 		pagefile = "/fortuneteller/ootd/" + pagefile;
 	} else if(pagefile.contains("ootdResult.jsp")) { 

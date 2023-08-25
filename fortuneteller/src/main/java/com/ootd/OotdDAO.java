@@ -62,6 +62,45 @@ public class OotdDAO {
 	}
 	
 	
+	// 회원 아이디로 회원 성별 찾아오기
+	public String searchGender(String userId) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		
+		String userGender = "";
+		String sql = "";
+		
+		try {
+			conn = ConnUtil.getConnection();
+			sql = "select gender from member where id = '" + userId + "'";
+			pstmt = conn.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+			
+			if(rs.next()) {
+				userGender = rs.getString("gender");;
+			}
+		} catch(Exception e) {
+			e.printStackTrace();
+		} finally {
+			if(rs != null) {
+				try {rs.close();} catch(SQLException s) {}
+			} 
+			
+			if(pstmt != null) {
+				try {pstmt.close();} catch(SQLException s) {}
+			} 
+			
+			if(conn != null) {
+				try {conn.close();} catch(SQLException s) {}
+			} 
+		}
+		
+		System.out.println("회원 성별: " + userGender);
+		return userGender;
+	}
+	
+	
 	// 테스트 결과(옷)
 	public String searchLook(int resultNum) {
 		Connection conn = null;

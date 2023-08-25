@@ -146,7 +146,7 @@ String userName = ootdDAO.searchName(loginID);
 	/* 딜레이 후 버튼 생성 */
 	setTimeout(function(){
 	  document.querySelector('.test_replay').style.display = "block";
-	}, 6000);
+	}, 3500);
 	</script>
 	<%
 	}
