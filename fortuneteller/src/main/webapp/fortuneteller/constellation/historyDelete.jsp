@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
     <%request.setCharacterEncoding("utf-8"); %>
     <%@ page import="com.constellation.*" %>
-    <jsp:useBean id="dao" class="com.constellation.ConstellationDAO" /> 
+    <jsp:useBean id="dao" class="com.history.HistoryDAO" /> 
     <%
     	int num =Integer.parseInt(request.getParameter("num"));
     	String pageNum = request.getParameter("pageNum");
@@ -17,7 +17,7 @@
 </head>
 <body>
 <script type="text/javascript">
-window.location="/fortuneteller/index.jsp?page=history.jsp&pageNum=<%=pageNum%>";
+	window.location="/fortuneteller/index.jsp?page=history.jsp&pageNum=<%=pageNum%>";
 </script>
 </body>
 </html>
