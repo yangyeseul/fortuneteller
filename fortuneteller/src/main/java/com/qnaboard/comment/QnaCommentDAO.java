@@ -34,7 +34,7 @@ public class QnaCommentDAO {
 		List<QnaCommentVO> list = null;
 
 		try {
-			sql = "select * from qa_comment where com_ref in (select qa_num from qnaboard where qa_num=?) order by com_regdate desc";
+			sql = "select * from qa_comment where com_ref in (select qa_num from qnaboard where qa_num=?) order by com_num desc";
 			conn = ConnUtil.getConnection();
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, num);
@@ -141,38 +141,6 @@ public class QnaCommentDAO {
 			}
 		}
 	}// end insertComment
-	public void updateComment(QnaCommentVO vo) {
-		conn = null;
-		pstmt = null;
-		String sql = "";
-		rs = null;
-		try {
-			sql = "update qa_comment set com_writer=?, com_regdate=?, com_content=? where com_num=?";
-			conn = ConnUtil.getConnection();
-			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, vo.getCom_writer());
-			pstmt.setDate(2, vo.getCom_regdate());
-			pstmt.setString(3, vo.getCom_content());
-			pstmt.setInt(4, vo.getCom_num());
-			pstmt.executeUpdate();			
-		}catch(Exception ee) {
-			ee.getMessage();
-		}finally {
-			if(conn != null)try {
-					conn.close();
-			}catch(SQLException se) {
-				se.getMessage();
-			}if(pstmt != null)try {
-					pstmt.close();
-			}catch(SQLException se) {
-				se.getMessage();
-			}if(rs != null)try {
-					rs.close();
-			}catch(SQLException se) {
-				se.getMessage();
-			}
-		}
-	}// end updateQna
 	public void deleteComment(QnaCommentVO vo) {
 		conn = null;
 		pstmt = null;

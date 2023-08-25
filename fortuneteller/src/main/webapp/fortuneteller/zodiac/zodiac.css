@@ -1,4 +1,14 @@
 @charset "UTF-8";
+@font-face {
+    font-family: 'humen';
+    src: url('/fortuneteller/zodiac/fonts/HMFMPYUN.TTF') format('ttf');
+    font-weight: 300;
+    font-style: normal;
+}
+.test_font{
+ font-family : 'humen';
+ font-size: 20px;
+}
 .image img{ transition: 0.3s; }
 .image a:hover img, .gallery a:focus img{
   transform: scale(1.2);
@@ -13,6 +23,6 @@
 }
 .image2 img{
         position: relative;
+        top: 150px;
         right: 300px;
-        top: 50px;
 }

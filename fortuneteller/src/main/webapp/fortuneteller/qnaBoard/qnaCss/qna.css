@@ -359,7 +359,7 @@ option {
 }
 .review_table2_tr td button a {
 	position: relative;
-	top: 300px;
+	top: 20px;
 	cursor: pointer;
 	font-family: 'Cafe24Ssurround';
 	font-size:15px !important;
@@ -371,7 +371,7 @@ option {
 
 .review_table2_tr td button a:hover {
 	position: relative;
-	top: 300px;
+	top: 20px;
 	cursor: pointer;
 	font-family: 'Cafe24Ssurround';
 	font-size:15px !important;
@@ -381,8 +381,17 @@ option {
 	color:#fddd5f;
 	padding:10px 20px;
 }
-/* .commentForm {
+.commentForm {
 	position: relative;
-	top: 50px;
-	right: 200px;
-} */
+	top: auto;
+	margin-right: 550px;
+}
+hr {
+	height: 1px;
+	border: 0;
+	border-style: solid;
+	background: #E2E2E2;
+}
+h4 {
+	text-align: left;
+}

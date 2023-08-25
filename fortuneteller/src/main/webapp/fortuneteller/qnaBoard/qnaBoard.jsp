@@ -8,7 +8,7 @@
     String num = request.getParameter("num");
     String id = (String)session.getAttribute("loginID");
     int readcount = Integer.parseInt(request.getParameter("readcount"));
-   
+    int rnum = Integer.parseInt(request.getParameter("rnum"));
     
     QnaBoardDAO dao = new QnaBoardDAO();
     QnaBoardVO vo = dao.getBoard(num);
@@ -22,8 +22,9 @@
     	url = "/fortuneteller/qnaBoard/qnaComForm.jsp";
     } else if(url.equals("qnaComProc.jsp")){
     	url = "/fortuneteller/qnaBoard/qnaComProc.jsp";
+    } else if(url.equals("qnaComDel.jsp")){
+    	url = "/fortuneteller/qnaBoard/qnaComDel.jsp";
     }
-
     %>
 <!DOCTYPE html>
 <html>
@@ -47,7 +48,7 @@
 				<th class="list_table_03_td" align="center" width="70">조회</th>
 			</tr>
 			<tr>
-				<td width="100" align="center"><%= vo.getQa_num() %></td>
+				<td width="100" align="center"><%= rnum+1 %></td>
 				<td width="400" align="center"><%= vo.getQa_subject() %></td>
 				<td width="150" align="center"><%= vo.getQa_writer() %></td>
 				<td width="150" align="center"><%= vo.getQa_regdate() %></td>
@@ -60,26 +61,33 @@
 <br>
 	<%= vo.getQa_content() %>
 </div>
-<br><br><br><br><br>
+<br><br><br>
+<hr width="800px">
+<br><br><h4>Comment</h4><br>
 <div class="commentForm">
-<jsp:include page="<%=url %>" /><%-- 댓글 입력 폼 --%>
+<jsp:include page="<%=url%>" >
+	 <jsp:param name="num" value="<%= num %>" />
+     <jsp:param name="rnum" value="<%= rnum %>" />
+      <jsp:param name="readcount" value="<%= readcount %>" />
+</jsp:include>
+<%-- 댓글 입력 폼 --%>
 </div>
 <div class="buttons">
 <% if(id == null){ %>
 <table class="review_table2">
 	<tr class="review_table2_tr">
-		<td align="center" colspan="1">
+		<td align="center">
 			<button><a href="/fortuneteller/index.jsp?page=qnaBoardList.jsp" class="return">목록으로 돌아가기</a></button>
 		</td>
 	</tr>
 </table>
 </div>
-<% }else if(id.equals("jhj93")){ %>
+<% }else if(id.equals("admin")){ %>
 <div class="buttons">
 <table class="review_table2">
 	<tr class="review_table2_tr">
 		<td align="center" colspan="3">
-			<button><a href="/fortuneteller/index.jsp?page=qnaUpdateForm.jsp&num=<%=num %>" class="update">글 수정</a></button>
+			<button><a href="/fortuneteller/index.jsp?page=qnaUpdateForm.jsp&num=<%=num %>&rnum=<%=rnum %>" class="update">글 수정</a></button>
 			<button><a href="#" class="delete" onclick="deleteCheck()">글 삭제</a></button>
 			<button><a href="/fortuneteller/index.jsp?page=qnaBoardList.jsp" class="return">목록으로 돌아가기</a></button>
 		</td>

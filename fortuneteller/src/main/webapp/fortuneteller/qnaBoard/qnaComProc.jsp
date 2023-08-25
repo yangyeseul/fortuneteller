@@ -10,6 +10,7 @@
 	String comment = request.getParameter("qa_comment");
 	int num = Integer.parseInt(request.getParameter("num"));
 	int readcount = Integer.parseInt(request.getParameter("readcount"));
+	int rnum = Integer.parseInt(request.getParameter("rnum"));
 	
 	QnaCommentDAO dao = QnaCommentDAO.getInstance();
 	QnaCommentVO vo = new QnaCommentVO();
@@ -22,5 +23,5 @@
 	dao.insertComment(vo);
 	
 	%>
-<meta http-equiv="refresh" content="0; url=/fortuneteller/index.jsp?page=qnaBoard.jsp&num=<%=num %>&readcount=<%=readcount %>"></meta>
+<meta http-equiv="refresh" content="0; url=/fortuneteller/index.jsp?page=qnaBoard.jsp&num=<%=num %>&readcount=<%=readcount %>&rnum=<%=rnum%>"></meta>
 

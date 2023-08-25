@@ -12,6 +12,9 @@
     ZodiacTestVO zVo = new ZodiacTestVO();
     MemberVO mVo = new MemberVO();
     
+    String zodiac = zVo.getZc_zodiac();
+    String today = zVo.getZc_today();
+    
     String id = (String)session.getAttribute("loginID");
     if(id != null){
     mVo = zDao.setMember(id);
@@ -27,17 +30,22 @@
 <link rel="stylesheet" href="zodiac/zodiac.css">
 <body>
 <div align="center" style="font-size:20px" style="font:나눔고딕">
-<p style="font-size:50px" style="font-style:red">아나타와<br>
-<img alt="" src="<%= zVo.getZc_zodiac() %>" width="300" style="border-radius:90px"><br>
-로군요...<br></p>
-<%= zVo.getZc_today() %>
-<% } %>
-<br>
-<br>
+<p style="font-size:30px" style="font-style:red">당신은<img alt="" src="<%= zVo.getZc_zodiac() %>" width="200" style="border-radius:90px">
+로군요!?<br></p>
+<br><br>
+<table>
+	<tr>
+		<td><%= zVo.getZc_today() %></td>
+	</tr>
+</table>
+<% }else if(id != null && zVo.getZc_today() == null && zVo.getZc_zodiac() == null){ %>
+<div align="center" style="font-size:20px" style="font:나눔고딕">
+<p style="font-size:30px" style="font-style:red">당신은 인간이 아닌가요..??</p>
 </div>
+<% } %>
 <div align="right" class="image2">'
 <a href="index.jsp?page=ZodiacTestView.jsp" name="home">
-<img src="zodiac/img/페페돌아가기.png" width="150" border="0" style="border-radius: 80px">
+<img src="zodiac/img/돌아가기.png" width="200" border="0" style="border-radius: 80px">
 </a>
 </div>
 </body>
