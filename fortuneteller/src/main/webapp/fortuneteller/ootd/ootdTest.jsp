@@ -65,10 +65,10 @@ String userName = ootdDAO.searchName(loginID);
 		<div class="test_deck">
 			<div class="slide">
 			<%
-			for(int i = 1; i <= 36; i++) { // 78개임 원래
-				resultNum = (int) (Math.random() * 36 + 1); // 77
+			for(int i = 0; i < 78; i++) { 
+				resultNum = (int) (Math.random() * 78 + 1); 
 				
-				for(int j = 1; j <= 36; j++) { // 78
+				for(int j = 0; j < 78; j++) { 
 					if(resultNum != rNums[j]) {
 						rNums[i] = resultNum;
 					} else {
@@ -78,7 +78,7 @@ String userName = ootdDAO.searchName(loginID);
 			%>
 				<div class="card_slide">
 					<a href="/fortuneteller/index.jsp?page=ootdResult.jsp?result=<%= rNums[i] %>">
-						<span><%= i %></span>
+						<span><%= i+1 %></span>
 						<img src="/fortuneteller/ootd/img/tarot/80.png">
 					</a>
 				</div>
