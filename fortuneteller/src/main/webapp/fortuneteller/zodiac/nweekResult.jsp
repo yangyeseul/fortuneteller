@@ -10,21 +10,14 @@
     <% 
     request.setCharacterEncoding("utf-8");
     
+    String id = (String)session.getAttribute("loginID");
+    
     ZodiacDAO.getInstance();
     ZodiacDAO zDao = new ZodiacDAO();
     ZodiacTestVO zVo = new ZodiacTestVO();
     MemberVO mVo = new MemberVO();
     HistoryDAO dao = new HistoryDAO();
     InfoVO vo = new InfoVO();
-    
-    String zodiac = zVo.getZc_zodiac();
-    String week = zVo.getZc_week();
-    
-    String id = (String)session.getAttribute("loginID");
-    if(id != null && zodiac != null){
-    mVo = zDao.setMember(id);
-    int year = mVo.getYear();
-    zVo = zDao.nweekZodiac(year);
     
     String imgSrc = "/fortuneteller/img/slide04.png";
 	 String testName = "띠 운세";
@@ -36,6 +29,16 @@
 	 vo.setTestPage(testPage);
 	 dao.insertInfo(vo);
 	 response.sendRedirect("/fortuneteller/zodiac/ZodiacTestView.jsp");
+    
+    String zodiac = zVo.getZc_zodiac();
+    String week = zVo.getZc_week();
+    
+    
+    if(id != null && zodiac != null){
+    mVo = zDao.setMember(id);
+    int year = mVo.getYear();
+    zVo = zDao.nweekZodiac(year);
+    
     %>
 <!DOCTYPE html>
 <html>
