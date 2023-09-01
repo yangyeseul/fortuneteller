@@ -34,14 +34,15 @@
 		
 		
 		if(text ==null){
-			count = dao.getTestCount();//전체 글 수
+			count = dao.getTestCount(id);//전체 글
+			System.out.print(count);
 				if(count >0){
-					paging = dao.getInfo(startRow,endRow);
+					paging = dao.getInfo(startRow,endRow,id);
 				}
 		}else {//검색이면
-					count = dao.getTestCount(what, text);
+					count = dao.getTestCount(what, text ,id);
 				if(count >0){
-					paging = dao.getInfo(startRow,endRow,what, text);
+					paging = dao.getInfo(startRow,endRow,what, text ,id);
 				}
 		}
 		
@@ -51,7 +52,7 @@
 <head>
 <meta charset="UTF-8">
 <title>테스트 내역</title>
-<link type="text/css" rel="stylesheet" href="/history/testHistory.css">
+<link type="text/css" rel="stylesheet" href="/fortuneteller/history/testHistory.css">
 </head>
 <body>
 
