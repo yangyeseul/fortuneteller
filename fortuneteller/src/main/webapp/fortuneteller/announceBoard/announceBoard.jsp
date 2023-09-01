@@ -50,7 +50,7 @@
 </div>
 <br><br><br><br><br>
 <div class="buttons">
-<% if(id == null || !id.equals("jhj93")){ %>
+<% if(id == null || !id.equals("admin")){ %>
 <table class="review_table2">
 	<tr class="review_table2_tr">
 		<td align="center" colspan="1">
@@ -58,7 +58,7 @@
 		</td>
 	</tr>
 </table>
-<% }else if(id.equals("jhj93")){ %>
+<% }else if(id.equals("admin")){ %>
 <table class="review_table2">
 	<tr class="review_table2_tr">
 		<td align="center" colspan="4">

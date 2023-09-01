@@ -55,7 +55,7 @@
 			</table>
 <% }%>
 <% if(id == null){%>
-<% }else if(id.equals("jhj93")){ %>
+<% }else if(id.equals("admin")){ %>
 	<div class="buttons">
 		<table class="comment_table">
 			<tr class="comment_table_tr">

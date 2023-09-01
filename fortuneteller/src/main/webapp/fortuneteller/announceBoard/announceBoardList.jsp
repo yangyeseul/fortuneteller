@@ -59,8 +59,8 @@
 	<div class="notice_title">
 	<span>N O T I C E</span>
 	</div>
-	<% if(id == null || !id.equals("jhj93")){ %>
-	<% }else if(id.equals("jhj93")){ %>
+	<% if(id == null || !id.equals("admin")){ %>
+	<% }else if(id.equals("admin")){ %>
 	<div class="list_write">
 		<a href="/fortuneteller/index.jsp?page=announceWriteForm.jsp">WRITE</a>
 	</div>

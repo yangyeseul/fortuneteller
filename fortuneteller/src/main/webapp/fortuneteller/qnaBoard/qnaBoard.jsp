@@ -74,7 +74,7 @@
 	</tr>
 </table>
 </div>
-<% }else if(id.equals("jhj93")){ %>
+<% }else if(id.equals("admin")){ %>
 <div class="buttons">
 <table class="review_table2">
 	<tr class="review_table2_tr">

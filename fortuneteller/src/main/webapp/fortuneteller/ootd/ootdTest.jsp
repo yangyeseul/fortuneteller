@@ -65,10 +65,10 @@ String userName = ootdDAO.searchName(loginID);
 		<div class="test_deck">
 			<div class="slide">
 			<%
-			for(int i = 1; i <= 22; i++) { // 78개임 원래
-				resultNum = (int) (Math.random() * 22 + 1); // 77
+			for(int i = 1; i <= 36; i++) { // 78개임 원래
+				resultNum = (int) (Math.random() * 36 + 1); // 77
 				
-				for(int j = 1; j <= 22; j++) { // 78
+				for(int j = 1; j <= 36; j++) { // 78
 					if(resultNum != rNums[j]) {
 						rNums[i] = resultNum;
 					} else {
@@ -146,7 +146,7 @@ String userName = ootdDAO.searchName(loginID);
 	/* 딜레이 후 버튼 생성 */
 	setTimeout(function(){
 	  document.querySelector('.test_replay').style.display = "block";
-	}, 6000);
+	}, 3500);
 	</script>
 	<%
 	}
