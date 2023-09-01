@@ -1,0 +1,121 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'Pretendard-Bold';
+    src: url('/fortunetellerfont/Pretendard-Bold.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+
+/* 테스트 내역 */
+.testHistoryTable{
+	float: left;
+	border-radius: 20px;
+    border: #cdcdcd 1px solid;
+    margin-right: 25px;
+    margin-bottom: 20px;
+    padding: 11px 11px 14px 11px;
+    box-shadow: 1px 1px 5px #cdcdcd;
+}
+
+#historyImg{
+ 	border-radius: 20px;
+ 	object-fit: cover;
+ }
+ 
+ th,td{
+ 	font-family: 'Pretendard-Bold';
+	font-weight:bold;
+	letter-spacing:-1px;
+	font-size:17px;
+ }
+ #format{
+	font-weight:500;
+ }
+ #format>a{
+ 	color:#9a9a9a;
+ }
+ 
+ #historyDelete>input[type=button]{
+	font-weight:500;
+	color: #9a9a9a;
+	font-size: 12px;
+	background-color: transparent;
+	border: none;
+	cursor:pointer;
+ }
+ 
+ /*내역 없을 시  */
+ span{
+ 	left: 270px;
+    top: 230px;
+    position: relative;
+     font-family: 'Pretendard-Bold';
+     font-weight: bold;
+     font-size: 28px;
+ }
+ /* 검색폼 */
+ .historySearch{
+ 	margin-top: 100px;
+ 	margin-top: 25px;
+    margin-left: 160px;
+    float: left;
+ }
+ 
+ #historySearchForm > select{
+ 	border-radius: 20px;
+ 	width: 120px;
+	height : 35px;
+	border: 1px solid #cdcdcd;
+	background-color: #F7F5F5;
+	font-family: 'Pretendard-Bold';
+	 font-weight: bold;
+	cursor: pointer;
+ }
+ #historySearchForm > input{
+ 	border-radius: 20px;
+	height : 35px;
+	border: 1px solid #cdcdcd;
+	align-items:center;
+	text-align:center;
+ }
+ #historySearchForm > input[type=submit]{
+ 	cursor: pointer;
+	font-family: 'Cafe24Ssurround';
+	margin-top:20px;
+	font-size:15px !important;
+	border-radius:30px;
+	background:#fddd5f;
+	padding:10px 20px;
+	border: 1px solid #fddd5f;
+	height:40px;
+ }
+ #historySearchForm > input[type=submit]:hover{
+ 	cursor: pointer;
+	font-family: 'Cafe24Ssurround';
+	margin-top:20px;
+	font-size:15px !important;
+	border-radius:30px;
+	background:#454545;
+	padding:10px 20px;
+	border: 1px solid #454545;
+	height:40px;
+	color: #fddd5f;
+ }
+ #historySearchForm > input[type=text]{
+ 	width: 300px;
+ }
+ 
+ #currnet_page{
+ 	padding: 5px 10px;
+    background: #fddd5f;
+    border-radius: 30px;
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

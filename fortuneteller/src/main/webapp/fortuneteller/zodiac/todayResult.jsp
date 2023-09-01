@@ -3,6 +3,9 @@
     <%@ page import="com.zodiactest.ZodiacDAO" %>
     <%@ page import="com.zodiactest.ZodiacTestVO" %>
     <%@ page import="com.member.MemberVO" %>
+    <%@ page import="com.history.HistoryDAO" %>
+    <%@ page import="com.history.InfoVO" %>
+    <%@ page import="java.sql.Timestamp" %>
     
     <% 
     request.setCharacterEncoding("utf-8");
@@ -11,15 +14,28 @@
     ZodiacDAO zDao = new ZodiacDAO();
     ZodiacTestVO zVo = new ZodiacTestVO();
     MemberVO mVo = new MemberVO();
+    HistoryDAO dao = new HistoryDAO();
+    InfoVO vo = new InfoVO();
     
     String zodiac = zVo.getZc_zodiac();
     String today = zVo.getZc_today();
     
     String id = (String)session.getAttribute("loginID");
-    if(id != null){
+    if(id != null && zodiac != null){
     mVo = zDao.setMember(id);
     int year = mVo.getYear();
     zVo = zDao.todayZodiac(year);
+    
+  	 String imgSrc = "/fortuneteller/img/slide04.png";
+  	 String testName = "띠 운세";
+  	 String testPage="/fortuneteller/index.jsp?page=ZodiacTestView.jsp";
+  	 vo.setId(id);
+	 vo.setRegdate(new Timestamp(System.currentTimeMillis()));
+	 vo.setImage(imgSrc);
+	 vo.setTestName(testName);
+	 vo.setTestPage(testPage);
+	 dao.insertInfo(vo);
+	 response.sendRedirect("/fortuneteller/zodiac/ZodiacTestView.jsp");
     %>
 <!DOCTYPE html>
 <html>
@@ -43,7 +59,7 @@
 <p style="font-size:30px" style="font-style:red">당신은 인간이 아닌가요..??</p>
 </div>
 <% } %>
-<div align="right" class="image2">'
+<div align="right" class="image2">
 <a href="index.jsp?page=ZodiacTestView.jsp" name="home">
 <img src="zodiac/img/돌아가기.png" width="200" border="0" style="border-radius: 80px">
 </a>
