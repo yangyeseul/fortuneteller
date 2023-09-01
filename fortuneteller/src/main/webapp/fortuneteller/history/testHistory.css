@@ -6,17 +6,35 @@
     font-style: normal;
 }
 
+.history_wrap {
+	width:100%;
+	margin:0 auto;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+}
+
+.testHistoryContainer {
+	width: 90%;
+	height:auto;
+}
 
 /* 테스트 내역 */
 .testHistoryTable{
 	float: left;
 	border-radius: 20px;
     border: #cdcdcd 1px solid;
-    margin-right: 25px;
+    margin-right: 20px;
     margin-bottom: 20px;
     padding: 11px 11px 14px 11px;
     box-shadow: 1px 1px 5px #cdcdcd;
 }
+
+.testHistoryTable:last-child, .testHistoryTable:nth-child(4) {
+	margin-right: 0px;
+}
+
 
 #historyImg{
  	border-radius: 20px;
@@ -58,7 +76,6 @@
  .historySearch{
  	margin-top: 100px;
  	margin-top: 25px;
-    margin-left: 160px;
     float: left;
  }
  

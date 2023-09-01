@@ -146,9 +146,9 @@ input {
 	cursor: pointer;
 	font-size:15px !important;
 	border-radius:30px;
-	background:#454545;
-	border: 1px solid #454545;
-	color:#fddd5f;
+	background:#eee;
+	border: 1px solid #eee;
+	color:#454545;
 	padding:10px 20px;
 	height:40px;
 	width:250px;
@@ -159,11 +159,12 @@ input {
 	margin-top:20px;
 	font-size:15px !important;
 	border-radius:30px;
-	background:#fddd5f;
+	background:#454545;
 	padding:10px 20px;
-	border: 1px solid #fddd5f;
+	border: 1px solid #454545;
 	height:40px;
 	width:250px;
+	color:#fddd5f !important;
 }
 
 #modifyBtn {

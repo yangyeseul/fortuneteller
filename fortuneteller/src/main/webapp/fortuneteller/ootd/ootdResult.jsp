@@ -1,6 +1,12 @@
 <%@page import="com.ootd.OotdDAO"%>
+<%@page import="java.sql.Timestamp"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%> 
+    
+<jsp:useBean id="dao" class="com.history.HistoryDAO" />
+<jsp:useBean id="vo" class="com.history.InfoVO"> 
+	<jsp:setProperty property="*" name="vo"/>
+</jsp:useBean>
 
 <%
 request.setCharacterEncoding("UTF-8");
@@ -24,13 +30,23 @@ String resultLook = ootdDAO.searchLook(resultNum);
 <body>
 	<%
 	String loginID = (String) session.getAttribute("loginID");
-       
+	System.out.println(loginID);
+  	String imgSrc = "/fortuneteller/img/slide01.png";
+  	String testName = "오늘의 행운룩";
+  	String testPage="/fortuneteller/index.jsp?page=ootd.jsp"; 
+  	
 	if(loginID == null) {
 	%>
 	<jsp:include page="/fortuneteller/member/login.jsp" />
 		
 	<%
 	} else {
+		vo.setId(loginID);
+	  	vo.setRegdate(new Timestamp(System.currentTimeMillis()));
+	  	vo.setImage(imgSrc);
+	  	vo.setTestName(testName);
+	  	vo.setTestPage(testPage);
+	  	dao.insertInfo(vo);
 	%>
 	<div class="ootd_text">
 		깜박사가 알려주는 <span>오늘의 행운룩</span>
@@ -69,7 +85,7 @@ String resultLook = ootdDAO.searchLook(resultNum);
 		
 		<div class="test_buttons">
 				<input type="button" value="테스트 다시하기" onclick="document.location.href='/fortuneteller/index.jsp?page=ootd.jsp'">&nbsp;&nbsp;
-				<input type="button" value="결과 공유하기" onclick="document.location.href='/fortuneteller/index.jsp?page=ootd.jsp'">
+				<!-- <input type="button" value="결과 공유하기" onclick="document.location.href='/fortuneteller/index.jsp?page=ootd.jsp'"> -->
 			</div>
 	</div>
 	
