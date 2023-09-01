@@ -74,11 +74,12 @@
 			<div class="testTitle"><a href="#">수정구슬에게 물어봐</a></div>
 	</div>
 	
+	
 	<div class="interval">
 		<div class="testImgContainer">
-			<div class="testImg"><a href="#"><img src="/fortuneteller/img/slide03.png"></a></div>
+			<div class="testImg"><a href="/fortuneteller/zodiac/ZodiacTestView.jsp"><img src="/fortuneteller/img/slide04.png"></a></div>
 		</div>
-			<div class="testTitle"><a href="#">띠로 보는 나의 운세</a></div>
+			<div class="testTitle"><a href="/fortuneteller/img/slide04.png">띠로 보는 나의 운세</a></div>
 	</div>
 	
 </div>
