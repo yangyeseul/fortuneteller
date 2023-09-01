@@ -85,7 +85,7 @@ String resultLook = ootdDAO.searchLook(resultNum);
 		
 		<div class="test_buttons">
 				<input type="button" value="테스트 다시하기" onclick="document.location.href='/fortuneteller/index.jsp?page=ootd.jsp'">&nbsp;&nbsp;
-				<input type="button" value="결과 공유하기" onclick="document.location.href='/fortuneteller/index.jsp?page=ootd.jsp'">
+				<!-- <input type="button" value="결과 공유하기" onclick="document.location.href='/fortuneteller/index.jsp?page=ootd.jsp'"> -->
 			</div>
 	</div>
 	
