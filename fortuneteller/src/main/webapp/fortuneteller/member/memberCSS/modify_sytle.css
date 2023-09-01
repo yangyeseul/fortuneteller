@@ -164,6 +164,7 @@ input {
 	border: 1px solid #fddd5f;
 	height:40px;
 	width:250px;
+	color:#454545 !important;
 }
 
 #modifyBtn {
