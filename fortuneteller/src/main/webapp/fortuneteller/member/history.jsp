@@ -19,7 +19,7 @@
 	</div>
 
 	<div class="historySpace">
-		<jsp:include page="/history/testHistory.jsp" />
+		<jsp:include page="/fortuneteller/history/testHistory.jsp" />
 	</div>
 	
 	

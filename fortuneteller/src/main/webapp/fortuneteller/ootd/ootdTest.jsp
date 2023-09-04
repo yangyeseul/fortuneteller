@@ -66,7 +66,7 @@ String userName = ootdDAO.searchName(loginID);
 			<div class="slide">
 			<%
 			for(int i = 0; i < 78; i++) { 
-				resultNum = (int) (Math.random() * 78 + 1); 
+				resultNum = (int) (Math.random() * 78 + 1); // 1부터 78까지
 				
 				for(int j = 0; j < 78; j++) { 
 					if(resultNum != rNums[j]) {
