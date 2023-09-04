@@ -13,6 +13,9 @@
 		<span>사이트 소개</span>
 	</div>
 			
-	
+	<img src="/fortuneteller/siteguide/01.png">
+	<img src="/fortuneteller/siteguide/02.png">
+	<img src="/fortuneteller/siteguide/03.png">
+	<img src="/fortuneteller/siteguide/04.png">
 </body>
 </html>
