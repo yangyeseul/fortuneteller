@@ -31,8 +31,7 @@
 		<div class="nav_siteGuide">
 			<div class="nav_title">SITE GUIDE</div>
 			<ul>
-				<li><a href="#">사이트 소개</a></li>
-				<li><a href="#">팀원 소개</a></li>
+				<li><a href="/fortuneteller/index.jsp?page=siteGuide.jsp">사이트 소개</a></li>
 			</ul>
 		</div>
 	</div>

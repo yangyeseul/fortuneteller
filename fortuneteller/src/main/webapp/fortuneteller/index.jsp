@@ -13,6 +13,8 @@
 
 	if(pagefile == null) {
 		pagefile = "main.jsp";		
+	} else if(pagefile.equals("siteGuide.jsp")){ 
+		pagefile = "/fortuneteller/siteguide/" + pagefile;
 	} else if(pagefile.equals("login.jsp")) { // 회원정보 관련
 		pagefile = "/fortuneteller/member/" + pagefile;
 	} else if(pagefile.equals("regForm.jsp")) {
