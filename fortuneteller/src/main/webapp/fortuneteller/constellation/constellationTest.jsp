@@ -36,7 +36,7 @@
 <div class="parents">
 	<div align="center" id="resultBtn1"><a href="#"><input type="button" value="결과보기"></a></div>
 	<div align="center" id="resultBtn2"><a href="/fortuneteller/constellation/constellationTestResult.jsp"><input type="button" value="결과보기"></a></div>
-	<div id="image"><img src="/fortuneteller/constellation/constellationImg/우주인.jpg"><div>
+	<div id="image"><img src="/fortuneteller/constellation/constellationImg/우주인.jpg"></div>
 </div>
 
 <!--  -->
