@@ -39,7 +39,7 @@ public class OotdDAO {
 			rs = pstmt.executeQuery();
 			
 			if(rs.next()) {
-				userName = rs.getString("name");;
+				userName = rs.getString("name");
 			}
 		} catch(Exception e) {
 			e.printStackTrace();

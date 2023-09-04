@@ -24,6 +24,18 @@
 	background:linear-gradient(to bottom, white 30%, #d4f9ff 30% 70%, white 70%);
 
 }
+
+.crystal_text2 > span {
+	font-family: 'Pretendard-Bold';
+	font-weight:900;
+	font-size: 22px;
+	letter-spacing:-2px;
+	line-height:35px;
+	background:linear-gradient(to bottom, white 30%, #d4f9ff 30% 70%, white 70%);
+
+}
+
+
 .start_btn img{
         position: relative;
         left: 50px;
@@ -209,10 +221,17 @@
 }
 
 
-.results{
-	right: 621px;
+.results {
+    text-align: center;
+    margin: 30px auto;
+    width: 380px;
+    right: 608px;
+    bottom: 271px;
     position: absolute;
-    bottom: -51px;	
+    font-size: 20px;
+    top: 63%;
+    left: 45%;
+    color: #fffcd9;
 }
 
 .crystal_wrap {
@@ -221,15 +240,47 @@
 	height:auto;
 }
 
-.resultName{
-	position: relative;
-    bottom: 153px;
+.resultName {
+	position: absolute;
+    right: 869px;
+    bottom: 673px;
     font-family: 'Pretendard-Bold';
-	font-weight:bold;
-	font-size:32px;
-	color: #fffcd9;
-	letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 50px;
+    color: #fffcd9;
+    letter-spacing: 3px;
 }
+
+.text_box{
+	right: 569px;
+    position: absolute;
+    bottom: 44px;
+    opacity: 0.3;
+}
+
+.exit_btn img{
+        position: relative;
+        left: 50px;
+        top: 50px;
+        cursor: pointer;
+        transition: 0.3s;
+        
+}
+.exit_btn img:hover{
+        position: relative;
+        left: 50px;
+        top: 50px;
+        cursor: pointer;
+         transform: scale(1.1);    
+}
+
+.exit_btn{
+	right: 670px;
+    position: absolute;
+    bottom: -76px;
+}
+
+
 
 /* #link {color: #E45635;display:block;font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;text-align:center; text-decoration: none;}
 #link:hover {color: #CCCCCC}

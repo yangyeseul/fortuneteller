@@ -1,3 +1,15 @@
+
+function crystalCheck(id){
+	
+	if(id==""){
+		alert("로그인이 필요한 서비스 입니다.");
+		return false;
+	}else {
+		window.location="/fortuneteller/index.jsp?page=crystalMain.jsp";
+	}
+	
+}
+
 /*
 Dom Sammut 2013
 ***************

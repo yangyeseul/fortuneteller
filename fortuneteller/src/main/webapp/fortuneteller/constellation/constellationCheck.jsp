@@ -8,13 +8,14 @@
     </jsp:useBean>
     
     <%
-		request.setCharacterEncoding("utf-8");
-    String id =(String) session.getAttribute("loginID");
+	 request.setCharacterEncoding("utf-8");
+     String id =(String) session.getAttribute("loginID");
    	 System.out.println(id);
    	 String imgSrc = "/fortuneteller/constellation/constellationImg/constellationImageCut.png";
    	 String testName = "별자리 운세";
    	 String testPage="/fortuneteller/index.jsp?page=constellationMain.jsp";
     %>
+    
 <!DOCTYPE html>
 <html>
 <head>

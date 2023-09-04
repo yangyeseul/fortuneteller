@@ -15,44 +15,35 @@
 	request.setCharacterEncoding("utf-8");
 	String id=(String) session.getAttribute("loginID");
 	System.out.println(id);
-    String imgSrc = "/fortuneteller/constellation/constellationImg/constellationImageCut.png";
+    /* String imgSrc = "/fortuneteller/crystal/constellationImg/.png"; */
     String testName = "수정구슬에게 물어봐";
-    String testPage="/fortuneteller/index.jsp?page=constellationMain.jsp";
-%> 
-    
-    
+    String testPage="/fortuneteller/index.jsp?page=crystalMain.jsp";
+%>
+  
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
 <title></title>
 </head>
 <body>
+ 
+ <%if(id==null){ %>
 
-	<%if(id==null){ %>
-
-	<script type="text/javascript">
-		alert("로그인이 필요한 서비스 입니다.");
+<script type="text/javascript">
+	alert("로그인이 필요한 서비스 입니다.");
 	window.location=('/fortuneteller/index.jsp?page=login.jsp');
-	</script>
-
-	<!--loginProc.jsp 에 sendredirect 해놔서 안넘어가는  -->
-	<%}else{
+</script>
+ 
+<%}else{%>
 	
-  		 vo.setId(id);
-  		 vo.setRegdate(new Timestamp(System.currentTimeMillis()));
-  		 vo.setImage(imgSrc);
-  		 vo.setTestName(testName);
-  		 vo.setTestPage(testPage);
-  	 
-  	 
-  	 
-  		 dao.insertInfo(vo);
-  	 
-  		 response.sendRedirect("/fortuneteller/crystal/crystalChat.jsp");
-	}
-	%>
-
+  	 vo.setId(id);
+  	
+  	<script type="text/javascript">
+	window.location=('/fortuneteller/index.jsp?page=crystalChat.jsp');
+	</script>
+<%  	 
+}
+%>
 
 </body>
 </html>

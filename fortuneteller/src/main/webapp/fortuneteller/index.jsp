@@ -99,8 +99,25 @@
 		pagefile = "/fortuneteller/zodiac/" + pagefile;
 	} else if(pagefile.equals("tomorrowResult.jsp")){
 		pagefile = "/fortuneteller/zodiac/" + pagefile;
+	}else if(pagefile.equals("crystalMain.jsp")){		//수정구슬 (시작)
+		pagefile = "/fortuneteller/crystal/" + pagefile;
+	}else if(pagefile.equals("crystalCheck.jsp")){		//수정구슬 (로그인 체크)
+		pagefile = "/fortuneteller/crystal/" + pagefile;
+	}else if(pagefile.equals("crystalChat.jsp")){		//수정구슬 (채팅)
+		pagefile = "/fortuneteller/crystal/" + pagefile;
+	}else if(pagefile.equals("crystalKeyword.jsp")){	//수정구슬 (키워드선택)
+		pagefile = "/fortuneteller/crystal/" + pagefile;
+	}else if(pagefile.contains("crystalLoading.jsp")){	//수정구슬 (로딩)
+		pagefile = "/fortuneteller/crystal/" + pagefile;
+	}else if(pagefile.contains("crystalResults.jsp")){	//수정구슬 (결과)
+		pagefile = "/fortuneteller/crystal/" + pagefile;
 	}
 %>
+
+<!--
+eqauls > ()안 기본주소 그대로 고정되어 이동하는 경우
+contains > ()안에 기본주소 외에 별도의 추가구문이 포함되어 있을 경우
+-->
 
 <link rel="stylesheet" href="css/style_index.css">
 <script type="text/javascript" src="member/script.js"></script>

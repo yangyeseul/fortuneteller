@@ -6,12 +6,13 @@
     <jsp:useBean id="vo" class="com.member.MemberVO">
     <jsp:setProperty property="*" name="vo"/>
     </jsp:useBean>
+    
     <%
-		request.setCharacterEncoding("utf-8");
+	request.setCharacterEncoding("utf-8");
     String id =(String) session.getAttribute("loginID");
-   	 System.out.println(id);
-   	 
+   	System.out.println(id); 
     %>
+    
 <!DOCTYPE html>
 <html>
 <head>

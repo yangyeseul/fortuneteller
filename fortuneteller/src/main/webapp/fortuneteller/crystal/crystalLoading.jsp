@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+<%
+String crystalResult=request.getParameter("crystalResult");
+%>
 
 <!DOCTYPE html>
 <html>
@@ -9,7 +13,7 @@
 <link type="text/css" rel="stylesheet" href="/fortuneteller/crystal/crystalCSS/crysral_style.css">
 
 <!--3초 뒤 crystalResults 페이지로 이동-->
-<meta http-equiv="refresh" content="3; http://localhost:9090/fortuneteller/index.jsp?page=crystalResults.jsp">
+<meta http-equiv="refresh" content="3; http://localhost:9090/fortuneteller/index.jsp?page=crystalResults.jsp?crystalResult=<%= crystalResult %>">
 
 </head>
 <body>

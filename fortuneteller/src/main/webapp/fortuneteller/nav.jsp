@@ -13,7 +13,7 @@
 			<div class="nav_title">TEST</div>
 			<ul>
 				<li><a href="/fortuneteller/index.jsp?page=ootd.jsp">깜박사가 알려주는 오늘의 행운룩</a></li>
-				<li><a href="#">수정구슬에게 물어봐</a></li>
+				<li><a href="/fortuneteller/index.jsp?page=crystalMain.jsp">수정구슬에게 물어봐</a></li>
 				<li><a href="/fortuneteller/index.jsp?page=constellationMain.jsp">이번달 나의 별자리 운세는?</a></li>
 				<li><a href="/fortuneteller/index.jsp?page=ZodiacTestView.jsp">띠로 보는 나의 운세</a></li>
 			</ul>
