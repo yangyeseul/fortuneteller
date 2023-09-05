@@ -19,6 +19,7 @@
 		<img src="/fortuneteller/siteguide/img/02.png">
 		<img src="/fortuneteller/siteguide/img/03.png">
 		<img src="/fortuneteller/siteguide/img/04.png">
+		<img src="/fortuneteller/siteguide/img/05.png">
 	</div>	
 </body>
 </html>

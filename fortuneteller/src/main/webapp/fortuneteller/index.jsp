@@ -103,6 +103,10 @@
 		pagefile = "/fortuneteller/zodiac/" + pagefile;
 	} else if(pagefile.equals("tomorrowResult.jsp")){
 		pagefile = "/fortuneteller/zodiac/" + pagefile;
+	} else if(pagefile.equals("nweekResult.jsp")){
+		pagefile = "/fortuneteller/zodiac/" + pagefile;
+	} else if(pagefile.equals("weekResult.jsp")){
+		pagefile = "/fortuneteller/zodiac/" + pagefile;
 	} else if(pagefile.equals("testHistory.jsp")){ // 테스트 히스토리
 		pagefile = "/fortuneteller/history/" + pagefile;
 	} else if(pagefile.equals("historyDelete.jsp")){ 

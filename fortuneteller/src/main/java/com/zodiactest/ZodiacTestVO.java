@@ -5,8 +5,8 @@ public class ZodiacTestVO {
 	private String zc_byear;
 	private String zc_today;
 	private String zc_tomorrow;
-	private String zc_month;
-	private String zc_year;
+	private String zc_week;
+	private String zc_nweek;
 	private String zc_zodiac;
 	
 	public int getZc_num() {
@@ -33,17 +33,17 @@ public class ZodiacTestVO {
 	public void setZc_tomorrow(String zc_tomorrow) {
 		this.zc_tomorrow = zc_tomorrow;
 	}
-	public String getZc_month() {
-		return zc_month;
+	public String getZc_week() {
+		return zc_week;
 	}
-	public void setZc_month(String zc_month) {
-		this.zc_month = zc_month;
+	public void setZc_week(String zc_week) {
+		this.zc_week = zc_week;
 	}
-	public String getZc_year() {
-		return zc_year;
+	public String getZc_nweek() {
+		return zc_nweek;
 	}
-	public void setZc_year(String zc_year) {
-		this.zc_year = zc_year;
+	public void setZc_nweek(String zc_nweek) {
+		this.zc_nweek = zc_nweek;
 	}
 	public String getZc_zodiac() {
 		return zc_zodiac;

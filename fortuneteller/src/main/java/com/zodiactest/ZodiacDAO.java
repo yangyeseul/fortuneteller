@@ -148,4 +148,84 @@ public class ZodiacDAO {
 		}
 		return article;
 	}
+	public ZodiacTestVO weekZodiac(int year) throws SQLException {
+		conn = null;
+		rs = null;
+		ZodiacTestVO article = null;
+		String sql = "";
+		try {
+			
+			sql = "select zc_zodiac, zc_week from zodiac where zc_byear=?";
+			conn = ConnUtil.getConnection();
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, year);
+			rs = pstmt.executeQuery();
+			if(rs.next()) {
+				article = new ZodiacTestVO();
+				article.setZc_week(rs.getString("zc_week"));
+				article.setZc_zodiac(rs.getString("zc_zodiac"));
+				}
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			if(conn != null) 
+			try{conn.close();
+				}catch(SQLException se) {
+					se.printStackTrace();
+				}
+			if(pstmt != null)
+			try {
+				pstmt.close();
+			}catch(SQLException se) {
+				se.printStackTrace();
+			}
+			if(rs != null)
+			try {
+				rs.close();
+			}catch(SQLException se) {
+				se.printStackTrace();
+			}
+		}
+		return article;
+	}// end month
+	public ZodiacTestVO nweekZodiac(int year) throws SQLException {
+		conn = null;
+		rs = null;
+		ZodiacTestVO article = null;
+		String sql = "";
+		try {
+			
+			sql = "select zc_zodiac, zc_nweek from zodiac where zc_byear=?";
+			conn = ConnUtil.getConnection();
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, year);
+			rs = pstmt.executeQuery();
+			if(rs.next()) {
+				article = new ZodiacTestVO();
+				article.setZc_nweek(rs.getString("zc_nweek"));
+				article.setZc_zodiac(rs.getString("zc_zodiac"));
+				}
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			if(conn != null) 
+			try{conn.close();
+				}catch(SQLException se) {
+					se.printStackTrace();
+				}
+			if(pstmt != null)
+			try {
+				pstmt.close();
+			}catch(SQLException se) {
+				se.printStackTrace();
+			}
+			if(rs != null)
+			try {
+				rs.close();
+			}catch(SQLException se) {
+				se.printStackTrace();
+			}
+		}
+		return article;
+	}// end year
 }
