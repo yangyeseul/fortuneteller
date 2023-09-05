@@ -35,7 +35,7 @@
 			</div>
 			
 			<div class="main_slide">
-				<a href="#"><img src="/fortuneteller/img/slide04.png"></a>
+				<a href="/fortuneteller/index.jsp?page=ZodiacTestView.jsp"><img src="/fortuneteller/img/slide04.png"></a>
 			</div>
 		</div>
 		

@@ -13,6 +13,8 @@
 
 	if(pagefile == null) {
 		pagefile = "main.jsp";		
+	} else if(pagefile.equals("siteGuide.jsp")){ 
+		pagefile = "/fortuneteller/siteguide/" + pagefile;
 	} else if(pagefile.equals("login.jsp")) { // 회원정보 관련
 		pagefile = "/fortuneteller/member/" + pagefile;
 	} else if(pagefile.equals("regForm.jsp")) {
@@ -100,6 +102,10 @@
 	} else if(pagefile.equals("todayResult.jsp")){
 		pagefile = "/fortuneteller/zodiac/" + pagefile;
 	} else if(pagefile.equals("tomorrowResult.jsp")){
+		pagefile = "/fortuneteller/zodiac/" + pagefile;
+	} else if(pagefile.equals("nweekResult.jsp")){
+		pagefile = "/fortuneteller/zodiac/" + pagefile;
+	} else if(pagefile.equals("weekResult.jsp")){
 		pagefile = "/fortuneteller/zodiac/" + pagefile;
 	} else if(pagefile.equals("testHistory.jsp")){ // 테스트 히스토리
 		pagefile = "/fortuneteller/history/" + pagefile;
