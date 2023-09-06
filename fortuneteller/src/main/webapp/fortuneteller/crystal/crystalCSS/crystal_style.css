@@ -1,5 +1,11 @@
 @charset "utf-8";
 
+.image img{
+	position:absolute;
+	left: 500px;
+    top: 100px;
+}
+
 @font-face {
     font-family: 'Pretendard-Bold';
     src: url('/fortunetellerfont/Pretendard-Bold.woff') format('woff');
@@ -15,6 +21,27 @@
     font-style: normal;
 }
 
+.crystal_main{
+	display:flex;
+	align-items:flex-end;
+	justify-content: center;
+	background:url(/fortuneteller/crystal/crystalImg/crystal_Main.png);
+	width:640px;
+	height:1036px;
+	padding-bottom:100px;
+}
+
+.crystal_main img{
+    cursor: pointer;
+    transition: 0.3s;
+        
+}
+
+.crystal_main img:hover{
+    cursor: pointer;
+    transform: scale(1.1);    
+}
+
 .crystal_text > span {
 	font-family: 'Pretendard-Bold';
 	font-weight:900;
@@ -22,261 +49,174 @@
 	letter-spacing:-2px;
 	line-height:35px;
 	background:linear-gradient(to bottom, white 30%, #d4f9ff 30% 70%, white 70%);
-
+	
 }
 
-.crystal_text2 > span {
+.crystal_text2{
 	font-family: 'Pretendard-Bold';
 	font-weight:900;
 	font-size: 22px;
 	letter-spacing:-2px;
 	line-height:35px;
-	background:linear-gradient(to bottom, white 30%, #d4f9ff 30% 70%, white 70%);
+	text-align:center;
+}
 
+.crystal_text2 > span {
+	font-family: 'Pretendard-Bold';
+	font-weight:900;
+	font-size: 35px;
+	letter-spacing:-2px;
+	line-height:35px;
 }
 
 
-.start_btn img{
-        position: relative;
-        left: 50px;
-        top: 50px;
-        cursor: pointer;
-        transition: 0.3s;
-        
-}
-.start_btn img:hover{
-        position: relative;
-        left: 50px;
-        top: 50px;
-        cursor: pointer;
-         transform: scale(1.1);    
+#crystal_chat_wrap{
+	background: url(/fortuneteller/crystal/crystalImg/crystal_Background.png); 
+	width:640px; 
+	height:976px;
+	padding:80px 0;
+	display:flex;
+	flex-direction:column;
+	justify-content:space-between;
+	align-items:center;
 }
 
-.start_btn{
-    right: 672px;
-    position: absolute;
-    bottom: -140px;
-    
-}
-
-
-.chat1{
-	right: 530px;
-    position: absolute;
-    bottom: 625px;
-}
-
-
-.chat2{
-	right: 511px;
-    position: absolute;
-    bottom: 570px;
-}
-
-.chat3{
-	right: 511px;
-    position: absolute;
-    bottom: 507px;  
-}
-
-.chat4{
-	right: 530px;
-    position: absolute;
-    bottom: 400px; 
-}
-
-.chat5{
-	right: 530px;
-    position: absolute;
-    bottom: 358px;
-}
-
-.chat6{
-	right: 511px;
-    position: absolute;
-    bottom: 283px;  
-}
-
-.chat7{
-	right: 530px;
-    position: absolute;
-    bottom: 190px;
-}
-
-.chat8{
-	right: 511px;
-    position: absolute;
-    bottom: 125px;
-}
-
-.chat9{
-	right: 530px;
-    position: absolute;
-    bottom: 25px;
+.chat10_btn{
+	display:none;
+	text-align:center;
 }
 
 .chat10_btn img{
-    position: relative;
-    left: 50px;
-    top: 50px;
     cursor: pointer;
     transition: 0.3s;
 }
 
 .chat10_btn img:hover{
-        position: relative;
-        left: 50px;
-        top: 50px;
-        cursor: pointer;
-        transform: scale(1.1);    
+    cursor: pointer;
+    transform: scale(1.1);    
 }
 
-.chat10_btn{
-	right: 671px;
-    position: absolute;
-    bottom: -67px;
+
+/*---------------------------------------------------------------------------------------------*/
+
+#crystal_keyword_wrap{
+	background: url(/fortuneteller/crystal/crystalImg/crystal_Background.png); 
+	width:640px; 
+	height:976px;
+	padding:80px 0;
+	display:flex;
+	flex-direction:column; /* 상위 */
+	justify-content:space-between; /* 하위(가로) */
+	align-items:center; /* 하위(세로) */
 }
+
 
 .keyword_effect img{
-        position: relative;
-        left: 50px;
-        top: 50px;
-        cursor: pointer;
-        transition: 0.3s;
-        
+ 	position: relative;
+    left: 50px;
+    top: 50px;
+    cursor: pointer;
+    transition: 0.3s;       
 }
+
 .keyword_effect img:hover{
-        position: relative;
-        left: 50px;
-        top: 50px;
-        cursor: pointer;
-         transform: scale(1.1);    
+ 	position: relative;
+    left: 50px;
+    top: 50px;
+    cursor: pointer;
+    transform: scale(1.1);    
 }
 
 .keyword_effect{
-	position: relative;
-	left: 842px;
-    bottom: 196px;
+	width:80%;
+	/* background:pink; */
+	padding:20px 0;
+	display:flex;
+	flex-wrap: wrap;
+	justify-content:space-evenly;
 }
 
-.keyword0{
-	right: 514px;
-    position: absolute;
-    bottom: 612px;	
+.keyword_effect div{
+	margin-bottom: 20px;
 }
 
-.keyword1{
-    right: 868px;
-    position: absolute;
-    bottom: 496px;
-}
-
-.keyword2{
-    right: 672px;
-    position: absolute;
-    bottom: 496px;
-
-}
-
-.keyword3{
-	right: 868px;
-    position: absolute;
-    bottom: 360px;
-}
-
-.keyword4{
-	right: 672px;
-    position: absolute;
-    bottom: 360px;
-}
-
-.keyword5{
-	right: 868px;
-    position: absolute;
-    bottom: 223px;
-}
-
-.keyword6{
-	right: 672px;
-    position: absolute;
-    bottom: 223px;
-}
-
-.keyword7{
-	right: 868px;
-    position: absolute;
-    bottom: 89px;
-}
-
-.keyword8{
-	right: 672px;
-    position: absolute;
-    bottom: 89px;
-}
-
-.keyword9{
-    right: 575px;
-    position: absolute;
-    bottom: -92px;
+.keyword_effect div:last-child{
+	margin-bottom:0px;
 }
 
 
-.results {
-    text-align: center;
-    margin: 30px auto;
-    width: 380px;
-    right: 608px;
-    bottom: 271px;
-    position: absolute;
-    font-size: 20px;
-    top: 63%;
-    left: 45%;
-    color: #fffcd9;
-}
+/*---------------------------------------------------------------------------------------------*/
 
-.crystal_wrap {
-	background:pink;
-	width:550px;
-	height:auto;
+#crystal_result_wrap{
+	background: url(/fortuneteller/crystal/crystalImg/crystal_result.png); 
+	width:640px; 
+	height:976px;
+	padding:60px 0;
+	display:flex;
+	flex-direction:column;
+	justify-content:space-between;
+	align-items:center;
 }
 
 .resultName {
-	position: absolute;
-    right: 869px;
-    bottom: 673px;
     font-family: 'Pretendard-Bold';
     font-weight: bold;
     font-size: 50px;
-    color: #fffcd9;
+    color: pink;
     letter-spacing: 3px;
+    padding-right:280px;
+	
 }
 
-.text_box{
-	right: 569px;
-    position: absolute;
-    bottom: 44px;
-    opacity: 0.3;
+.resultimage img{
+	margin-top:80px;
+	width:430px; 
+	height:430px;
 }
+
+
+.square{
+      width: 500px;
+      height: 150px;
+      background: rgba(255,252,217,0.2);
+
+/* 	
+	border-bottom: 360px solid #666666;
+	border-left: 180px solid transparent;
+	border-right: 180px solid #666666;
+	
+	border-bottom-width : 테두리 하단 두께
+	border-bottom-style : 테두리 하단 스타일
+	border-bottom-color : 테두리 하단 색상
+*/
+}
+
+
+.resultcontent{
+    font-size: 20px;
+    color: #fffcd9;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; 
+}
+
 
 .exit_btn img{
-        position: relative;
         left: 50px;
         top: 50px;
         cursor: pointer;
         transition: 0.3s;
-        
 }
+
 .exit_btn img:hover{
-        position: relative;
-        left: 50px;
-        top: 50px;
         cursor: pointer;
          transform: scale(1.1);    
 }
 
 .exit_btn{
 	right: 670px;
-    position: absolute;
     bottom: -76px;
 }
 

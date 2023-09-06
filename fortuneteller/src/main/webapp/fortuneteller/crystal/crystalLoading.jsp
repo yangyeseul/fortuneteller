@@ -10,10 +10,10 @@ String crystalResult=request.getParameter("crystalResult");
 <head>
 <meta charset="UTF-8">
 <title></title>
-<link type="text/css" rel="stylesheet" href="/fortuneteller/crystal/crystalCSS/crysral_style.css">
+<link type="text/css" rel="stylesheet" href="/fortuneteller/crystal/crystalCSS/crystal_style.css">
 
 <!--3초 뒤 crystalResults 페이지로 이동-->
-<meta http-equiv="refresh" content="3; http://localhost:9090/fortuneteller/index.jsp?page=crystalResults.jsp?crystalResult=<%= crystalResult %>">
+<meta http-equiv="refresh" content="3; http://localhost:9090/fortuneteller/index.jsp?page=crystalResult.jsp?crystalResult=<%= crystalResult %>">
 
 </head>
 <body>

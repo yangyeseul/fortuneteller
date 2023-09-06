@@ -4,9 +4,8 @@ import java.util.*;
 import java.sql.*;
 import javax.sql.*;
 
-
 public class CrystalDAO2 {
-	
+
 	private static CrystalDAO2 instance=null;
 	
 	public CrystalDAO2() {
@@ -16,17 +15,18 @@ public class CrystalDAO2 {
 	public static CrystalDAO2 getInstance() { //DB 연동
 		
 		if(instance==null) {
-			synchronized (CrystalDAO2.class) {
-				instance = new CrystalDAO2();
+			synchronized (CrystalDAO2.class) { //변수와 함수에 사용해서 동기화
+				instance=new CrystalDAO2();
 			}
 		}
 		return instance;
 	}
 	
-	
-//아이디로 멤버테이블 검색을 해서 이름을 찾아서 불러오기
+
+
+//아이디로 멤버테이블 검색해서 이름찾아 불러오기
 	public CrystalVO getName(String id) {
-		
+
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
@@ -35,19 +35,18 @@ public class CrystalDAO2 {
 		try {
 			conn = ConnUtil.getConnection();
 			
-			String sql = "select name from member where id=?";
-			pstmt = conn.prepareStatement(sql);
+			String sql="select name from member where id=?";
+			pstmt=conn.prepareStatement(sql);
 			pstmt.setString(1, id);
-			rs = pstmt.executeQuery();
+			rs=pstmt.executeQuery(); // 수행 결과로 resultSet객체의 값을 반환(select 구문 사용시 이용되는 함수)
 			
 			if(rs.next()) {
-				vo = new CrystalVO();
+				vo=new CrystalVO();
 				vo.setName(rs.getString("name"));
 			}
 			
-			
-		}catch (Exception e) {
-			e.printStackTrace();
+		}catch (Exception e) { //예외처리
+			e.printStackTrace(); //에러의 발생근원지를 찾아서 단계별로 에러를 출력
 		}finally {
 			if(conn != null) {
 				try {conn.close();
@@ -62,40 +61,34 @@ public class CrystalDAO2 {
 				} catch (SQLException s) {s.printStackTrace();}
 			}
 		}
-		
 		return vo;
 	}
-	//결과값(랜덤) 불러오기-------연애(crystalResult)
+	
+	
+	
+//결과값(랜덤) 불러오기-------crystalResult
 	public String getResult(String crystalResult) {
 		
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		CrystalVO vo = null;
-		String crystalContent = "";
+		CrystalVO vo=null;
+		String crystalContent="";
+		System.out.println(crystalResult);
 		
 		try {
 			conn = ConnUtil.getConnection(); //DB 연결
 			
-			/*
-			 * String sql =
-			 * "Select * from(select * from ? order by DBMS_RANDOM.RANDOM ) where rownum = 1"
-			 * ;
-			 * 
-			 * pstmt = conn.prepareStatement(sql); pstmt.setString(crystalResult); rs =
-			 * pstmt.executeQuery();
-			 */
-
-			String sql = "Select * from(select * from " + crystalResult + " order by DBMS_RANDOM.RANDOM ) where rownum = 1";
+			String sql= "Select * from (select * from "+crystalResult+" order by DBMS_RANDOM.value) where rownum = 1";
 			pstmt = conn.prepareStatement(sql);
+			//pstmt.setString(1, crystalResult);
+			
 			rs = pstmt.executeQuery(); // 수행 결과로 resultSet객체의 값을 반환(select 구문 사용시 이용되는 함수)
 			
-			
 			if(rs.next()) {
-				// vo = new CrystalVO();
-				crystalContent = rs.getString("love_contents");
+				//vo=new CrystalVO();
+				crystalContent=rs.getString("content");
 			}
-			
 			
 		}catch (Exception e) { //예외처리
 			e.printStackTrace(); //에러의 발생근원지를 찾아서 단계별로 에러를 출력
@@ -117,10 +110,4 @@ public class CrystalDAO2 {
 		System.out.println("테스트 결과: " + crystalContent);
 		return crystalContent;
 	}
-	
-	
-	
-	
-}	
-	
-
+}

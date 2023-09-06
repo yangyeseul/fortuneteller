@@ -2,18 +2,20 @@
     pageEncoding="UTF-8"%>
     
 <%@ page import="com.member.MemberDAO" %> 
-<%@ page import="com.member.MemberVO" %>    
+<%@ page import="com.crystal.CrystalVO" %>    
 
-<jsp:useBean id="dao" class="com.member.MemberDAO"/>
-<jsp:useBean id="vo" class="com.member.MemberVO">
-<jsp:setProperty property="*" name="vo"/>
+<jsp:useBean id="dao" class="com.crystal.CrystalDAO"/>
+<jsp:useBean id="vo1" class="com.crystal.CrystalVO">
+<jsp:setProperty property="*" name="vo1"/>
 </jsp:useBean>
 
 
 <%
 	request.setCharacterEncoding("utf-8");
 	String id=(String) session.getAttribute("loginID");
+	CrystalVO vo=dao.getName(id);
 	System.out.println(id);
+	System.out.println(vo.getName());
 %>
 
 
@@ -29,7 +31,7 @@
 var i = 1;
 function createLine(){
 		setTimeout(function(){
-			document.getElementById('aa').innerHTML += ("<div class=chat"+i+"><img align=center width=550 src=/fortuneteller/crystal/crystalImg/crystal_chat"+i+".png><br></div>")
+			document.getElementById('crystal_chat').innerHTML += ("<div style=\"margin-bottom:10px;\"><img src=/fortuneteller/crystal/crystalImg/crystal_chat"+i+".png><br></div>")
 		i++;
 			if(i < 10){
 				createLine();
@@ -38,17 +40,22 @@ function createLine(){
 }
 window.onload = createLine();
 
+
+/* 채팅내용 다 보여준 이후에 버튼 뜨게하기 위한 코드*/
+setTimeout(function(){
+  document.querySelector('.chat10_btn').style.display = "block";
+}, 10000);
+
 </script>
 </head>
 <body>
 		
 
-		<div id="aa" class="crystal_text" align="center"><span>수정구슬에게 물어봐</span></div><br>
+		<div class="crystal_text" align="center"><span>수정구슬에게 물어봐</span></div><br>
 
-		<div class="crystal_text2" align="center">[SYSTEM] " <%=vo.getName()%> " 님의 수정구슬 소환 </div><br><br>
-
-			 <img align="center" width="550" src="/fortuneteller/crystal/crystalImg/crystal_Background.png"><br><br>
-
+		<div class="crystal_text2" align="center">[SYSTEM] " <span><%=vo.getName()%></span> " 님의 수정구슬 소환 </div><br>
+		<div id="crystal_chat_wrap">
+			<div id="crystal_chat">
 			<!--
 			<div class="chat1">
 			<img align="center" width="550" src="/fortuneteller/crystal/crystalImg/crystal_chat1.png"><br><br>
@@ -86,16 +93,14 @@ window.onload = createLine();
 			<img align="center" width="550" src="/fortuneteller/crystal/crystalImg/crystal_chat9.png"><br><br>
 			</div>
 			-->
+			</div>
 			
 			<div class="chat10_btn">
 			<a href="/fortuneteller/index.jsp?page=crystalKeyword.jsp">
-			<img align="center" width="350" input type="button" src="/fortuneteller/crystal/crystalImg/crystal_chat10_btn.png"><br><br>
+			<img align="center" width="450" input type="button" src="/fortuneteller/crystal/crystalImg/crystal_chat10_btn.png">
 			</div>
  
+			</div>
 
-		<br>
-		
-
- 
 </body>
 </html>

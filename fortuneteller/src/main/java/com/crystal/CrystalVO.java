@@ -12,6 +12,8 @@ public class CrystalVO {
 	private String c_hobby;
 	private String c_study;
 	private String c_food;
+	private String content;
+	private String image;
 	
 	
 	public String getName() {
@@ -74,6 +76,19 @@ public class CrystalVO {
 	public void setC_food(String c_food) {
 		this.c_food = c_food;
 	}
+	public String getContent() {
+		return content;
+	}
+	public void setContent(String content) {
+		this.content = content;
+	}
+	public String getImage() {
+		return image;
+	}
+	public void setImage(String image) {
+		this.image = image;
+	}
+	
 	
 	
 }

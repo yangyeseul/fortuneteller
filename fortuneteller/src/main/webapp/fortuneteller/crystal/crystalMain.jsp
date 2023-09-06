@@ -24,21 +24,18 @@
 </head>
 <body>
 
-		<div class="crystal_text" align="center"><span>수정구슬에게 물어봐</span></div><br><br>
+		<div class="crystal_text" align="center"><span>수정구슬에게 물어봐</span></div><br>
 
 		
-		<div class="crystal_Text">
+		<div class="crystal_text2">
 			공부,취업,연애,사업 등으로 고민이 있다고?<br>
-			일상 속 갈팡질팡 순간들에 좋은 글귀가 필요할 때!<br><br>
+			일상 속 갈팡질팡 순간들에 좋은 글귀가 필요할 때!<br>
 		</div><br>
 
-		<div>
-		<img align="center" width="550" src="/fortuneteller/crystal/crystalImg/crystal_Main.png"></img><br><br>
-		</div>
-
-		<div class="start_btn">
+		<div class="crystal_main">
 			<a href="/fortuneteller/index.jsp?page=crystalCheck.jsp">
 			<img align="center" width="350" input type="button" src="/fortuneteller/crystal/crystalImg/crystal_Main_btn.png"></a><br><br>
+			</a>
 		</div>
 
 		<br>

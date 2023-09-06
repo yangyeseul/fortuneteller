@@ -1,4 +1,4 @@
-<%@page import="sun.security.jca.GetInstance"%>
+<%-- <%@page import="sun.security.jca.GetInstance"%> --%>
 <%@page import="com.crystal.CrystalDAO"%>
 <%@page import="com.crystal.CrystalVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -7,9 +7,12 @@
 <%@ page import="com.member.MemberDAO" %> 
 <%@ page import="com.member.MemberVO" %>    
 
-<jsp:useBean id="dao" class="com.member.MemberDAO"/>
+<jsp:useBean id="dao" class="com.crystal.CrystalDAO"/>
 <jsp:useBean id="vo" class="com.member.MemberVO">
+<jsp:useBean id="cVO" class="com.crystal.CrystalVO"/>
+
 <jsp:setProperty property="*" name="vo"/>
+
 </jsp:useBean>
 
 
@@ -21,8 +24,10 @@
 	
 	// db 연결	
 	CrystalDAO crystalDAO = CrystalDAO.getInstance();
+	CrystalVO resultVO = new CrystalVO(); 
 	
-	String content = crystalDAO.getResult(crystalResult);
+	CrystalVO vo1=crystalDAO.getName(id);
+	CrystalVO cVO = crystalDAO.getResult(crystalResult);
 %>
 
     
@@ -38,22 +43,28 @@
 
 		<div class="crystal_text" align="center"><span>수정구슬에게 물어봐</span></div><br><br>
 		
-		<div class="resultName" align="center"><%=vo.getName() %> </div>
-
-		<div class="results"><%= content %></div>
-
-		<img align="center" width="550" src="/fortuneteller/crystal/crystalImg/crystal_results.png"><br><br>
 		
-		<div class="text_box">
-		<img align="center" width="450" src="/fortuneteller/crystal/crystalImg/crystal_results_textbox.png">	
-		</div>
+		
+		
+		<div id="crystal_result_wrap">
 
-		<div class="exit_btn">
-		<a href="/fortuneteller/index.jsp?page=main.jsp">
-		<img align="center" width="350" type="button" src="/fortuneteller/crystal/crystalImg/crystal_exit_btn.png"></a><br><br>
-		</div>
+			<div class="resultName"><%=vo1.getName()%></div>
+
+			<div class="resultimage"><img src="/fortuneteller/crystal/crystalImgresult/<%=cVO.getImage()%>"></div>
+
+			<div class="square">
+				<div class="resultcontent"><%= cVO.getContent()%></div>
+			</div>
+
+		
+		
+
+			<div class="exit_btn">
+				<a href="/fortuneteller/index.jsp?page=main.jsp">
+				<img width="350" type="button" src="/fortuneteller/crystal/crystalImg/crystal_exit_btn.png"></a><br><br>
+			</div>
 	
-		
+		</div>
 	
 </body>
 </html>

@@ -109,7 +109,7 @@
 		pagefile = "/fortuneteller/crystal/" + pagefile;
 	}else if(pagefile.contains("crystalLoading.jsp")){	//수정구슬 (로딩)
 		pagefile = "/fortuneteller/crystal/" + pagefile;
-	}else if(pagefile.contains("crystalResults.jsp")){	//수정구슬 (결과)
+	}else if(pagefile.contains("crystalResult.jsp")){	//수정구슬 (결과)
 		pagefile = "/fortuneteller/crystal/" + pagefile;
 	}
 %>
