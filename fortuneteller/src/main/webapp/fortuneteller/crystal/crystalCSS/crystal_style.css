@@ -147,6 +147,25 @@
 
 /*---------------------------------------------------------------------------------------------*/
 
+#crystal_loading_wrap{
+	background-image: url(/fortuneteller/crystal/crystalImg/crystal_loading.gif);
+	background-size: cover;
+	width:630px; 
+	height:630px; 
+	display:flex;
+	flex-direction:column;
+	justify-content:space-between;
+	align-items:center;
+}
+
+
+.crystal_loading_text{
+	width:450px;
+  	margin-top: 425px;
+}
+
+/*---------------------------------------------------------------------------------------------*/
+
 #crystal_result_wrap{
 	background: url(/fortuneteller/crystal/crystalImg/crystal_result.png); 
 	width:640px; 
@@ -164,7 +183,8 @@
     font-size: 50px;
     color: pink;
     letter-spacing: 3px;
-    padding-right:280px;
+    margin-top:20px;
+    margin-right:280px;
 	
 }
 
