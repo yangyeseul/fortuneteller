@@ -67,7 +67,7 @@ public int getTestCount(String id) {
 	
 }//
 
-public List<InfoVO> getInfo(int start, int end,String id) {
+public List<InfoVO> getInfo(int start, int end, String id) {
 	Connection conn = null;
 	PreparedStatement pstmt = null;
 	ResultSet rs = null;

@@ -75,7 +75,7 @@
 		</tr>
 		<tr >
 			<td id="format"><a href="<%=vo.getTestPage()%>"><%=simpleFormat.format(vo.getRegdate()) %></a></td>
-			<td id="historyDelete"><input type="button" value="삭제" onclick="document.location.href='/history/historyDelete.jsp?num=<%=vo.getNum()%>&pageNum=<%=pageNum%>'"></td>
+			<td id="historyDelete"><input type="button" value="삭제" onclick="document.location.href='/fortuneteller/history/historyDelete.jsp?num=<%=vo.getNum()%>&pageNum=<%=pageNum%>'"></td>
 		</tr>
 		
 	</table>	
