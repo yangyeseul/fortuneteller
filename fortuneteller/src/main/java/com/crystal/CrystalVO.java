@@ -12,9 +12,9 @@ public class CrystalVO {
 	private String c_hobby;
 	private String c_study;
 	private String c_food;
-	
 	private String content;
-	private String imageUrl;
+	private String image;
+	
 	
 	public String getName() {
 		return name;
@@ -82,12 +82,13 @@ public class CrystalVO {
 	public void setContent(String content) {
 		this.content = content;
 	}
-	public String getImageUrl() {
-		return imageUrl;
+	public String getImage() {
+		return image;
 	}
-	public void setImageUrl(String imageUrl) {
-		this.imageUrl = imageUrl;
+	public void setImage(String image) {
+		this.image = image;
 	}
+	
 	
 	
 }

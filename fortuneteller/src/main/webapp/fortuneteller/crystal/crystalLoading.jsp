@@ -13,7 +13,7 @@ String crystalResult=request.getParameter("crystalResult");
 <link type="text/css" rel="stylesheet" href="/fortuneteller/crystal/crystalCSS/crystal_style.css">
 
 <!--3초 뒤 crystalResults 페이지로 이동-->
-<meta http-equiv="refresh" content="3; url=/fortuneteller/index.jsp?page=crystalResults.jsp?crystalResult=<%= crystalResult %>">
+<meta http-equiv="refresh" content="3; http://localhost:9090/fortuneteller/index.jsp?page=crystalResult.jsp?crystalResult=<%= crystalResult %>">
 
 </head>
 <body>
@@ -22,8 +22,11 @@ String crystalResult=request.getParameter("crystalResult");
 		<div class="crystal_text" align="center"><span>수정구슬에게 물어봐</span></div><br><br><br><br>
 
 
-			<img align="center" width="550" src="/fortuneteller/crystal/crystalImg/crystal_loading.gif"><br><br>
-
+		<div id="crystal_loading_wrap">
+			<div class="crystal_loading_text">
+			<img src="/fortuneteller/crystal/crystalImg/crystal_loading_text.png">
+			</div>
+		</div>
 
 <!-- 
  	<script type="text/javascript">

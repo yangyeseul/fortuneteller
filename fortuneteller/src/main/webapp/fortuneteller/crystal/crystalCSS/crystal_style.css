@@ -21,13 +21,12 @@
     font-style: normal;
 }
 
-
-.crystal_main {
+.crystal_main{
 	display:flex;
 	align-items:flex-end;
 	justify-content: center;
-	background:url(/fortuneteller/crystal/crystalImg/crystal_Main.png); 
-	width:640px; 
+	background:url(/fortuneteller/crystal/crystalImg/crystal_Main.png);
+	width:640px;
 	height:1036px;
 	padding-bottom:100px;
 }
@@ -50,21 +49,29 @@
 	letter-spacing:-2px;
 	line-height:35px;
 	background:linear-gradient(to bottom, white 30%, #d4f9ff 30% 70%, white 70%);
-
+	
 }
 
-.crystal_text2 > span {
+.crystal_text2{
 	font-family: 'Pretendard-Bold';
 	font-weight:900;
 	font-size: 22px;
 	letter-spacing:-2px;
 	line-height:35px;
-	background:linear-gradient(to bottom, white 30%, #d4f9ff 30% 70%, white 70%);
-
+	text-align:center;
 }
 
-#crystal_chat_wrap {
-	background:url(/fortuneteller/crystal/crystalImg/crystal_Background.png); 
+.crystal_text2 > span {
+	font-family: 'Pretendard-Bold';
+	font-weight:900;
+	font-size: 35px;
+	letter-spacing:-2px;
+	line-height:35px;
+}
+
+
+#crystal_chat_wrap{
+	background: url(/fortuneteller/crystal/crystalImg/crystal_Background.png); 
 	width:640px; 
 	height:976px;
 	padding:80px 0;
@@ -89,286 +96,149 @@
     transform: scale(1.1);    
 }
 
-/* 여기까지 바꿨음 */
 
+/*---------------------------------------------------------------------------------------------*/
 
-
-
-
-
-
+#crystal_keyword_wrap{
+	background: url(/fortuneteller/crystal/crystalImg/crystal_Background.png); 
+	width:640px; 
+	height:976px;
+	padding:80px 0;
+	display:flex;
+	flex-direction:column; /* 상위 */
+	justify-content:space-between; /* 하위(가로) */
+	align-items:center; /* 하위(세로) */
+}
 
 
 .keyword_effect img{
-        position: relative;
-        left: 50px;
-        top: 50px;
-        cursor: pointer;
-        transition: 0.3s;
-        
+ 	position: relative;
+    left: 50px;
+    top: 50px;
+    cursor: pointer;
+    transition: 0.3s;       
 }
+
 .keyword_effect img:hover{
-        position: relative;
-        left: 50px;
-        top: 50px;
-        cursor: pointer;
-         transform: scale(1.1);    
+ 	position: relative;
+    left: 50px;
+    top: 50px;
+    cursor: pointer;
+    transform: scale(1.1);    
 }
 
 .keyword_effect{
-	position: relative;
-	left: 842px;
-    bottom: 196px;
+	width:80%;
+	/* background:pink; */
+	padding:20px 0;
+	display:flex;
+	flex-wrap: wrap;
+	justify-content:space-evenly;
 }
 
-.keyword0{
-	right: 514px;
-    position: absolute;
-    bottom: 612px;	
+.keyword_effect div{
+	margin-bottom: 20px;
 }
 
-.keyword1{
-    right: 868px;
-    position: absolute;
-    bottom: 496px;
-}
-
-.keyword2{
-    right: 672px;
-    position: absolute;
-    bottom: 496px;
-
-}
-
-.keyword3{
-	right: 868px;
-    position: absolute;
-    bottom: 360px;
-}
-
-.keyword4{
-	right: 672px;
-    position: absolute;
-    bottom: 360px;
-}
-
-.keyword5{
-	right: 868px;
-    position: absolute;
-    bottom: 223px;
-}
-
-.keyword6{
-	right: 672px;
-    position: absolute;
-    bottom: 223px;
-}
-
-.keyword7{
-	right: 868px;
-    position: absolute;
-    bottom: 89px;
-}
-
-.keyword8{
-	right: 672px;
-    position: absolute;
-    bottom: 89px;
-}
-
-.keyword9{
-    right: 575px;
-    position: absolute;
-    bottom: -92px;
+.keyword_effect div:last-child{
+	margin-bottom:0px;
 }
 
 
-.resultscontent {
-    text-align: center;
-    margin: 30px auto;
-    width: 380px;
-    right: 608px;
-    bottom: 271px;
-    position: absolute;
-    font-size: 20px;
-    top: 63%;
-    left: 45%;
-    color: #fffcd9;
+/*---------------------------------------------------------------------------------------------*/
+
+#crystal_loading_wrap{
+	background-image: url(/fortuneteller/crystal/crystalImg/crystal_loading.gif);
+	background-size: cover;
+	width:630px; 
+	height:630px; 
+	display:flex;
+	flex-direction:column;
+	justify-content:space-between;
+	align-items:center;
 }
 
-.crystal_wrap {
-	background:pink;
-	width:550px;
-	height:auto;
+
+.crystal_loading_text{
+	width:450px;
+  	margin-top: 425px;
+}
+
+/*---------------------------------------------------------------------------------------------*/
+
+#crystal_result_wrap{
+	background: url(/fortuneteller/crystal/crystalImg/crystal_result.png); 
+	width:640px; 
+	height:976px;
+	padding:60px 0;
+	display:flex;
+	flex-direction:column;
+	justify-content:space-between;
+	align-items:center;
 }
 
 .resultName {
-	position: absolute;
-    right: 869px;
-    bottom: 673px;
     font-family: 'Pretendard-Bold';
     font-weight: bold;
     font-size: 50px;
-    color: #fffcd9;
+    color: pink;
     letter-spacing: 3px;
+    margin-top:20px;
+    margin-right:280px;
+	
 }
 
-.text_box{
-	right: 569px;
-    position: absolute;
-    bottom: 44px;
-    opacity: 0.3;
+.resultimage img{
+	margin-top:80px;
+	width:430px; 
+	height:430px;
 }
+
+
+.square{
+      width: 500px;
+      height: 150px;
+      background: rgba(255,252,217,0.2);
+
+/* 	
+	border-bottom: 360px solid #666666;
+	border-left: 180px solid transparent;
+	border-right: 180px solid #666666;
+	
+	border-bottom-width : 테두리 하단 두께
+	border-bottom-style : 테두리 하단 스타일
+	border-bottom-color : 테두리 하단 색상
+*/
+}
+
+
+.resultcontent{
+	font-family: 'Pretendard-Bold';
+    font-size: 20px;
+    color: #fffcd9;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; 
+}
+
 
 .exit_btn img{
-        position: relative;
         left: 50px;
         top: 50px;
         cursor: pointer;
         transition: 0.3s;
-        
 }
+
 .exit_btn img:hover{
-        position: relative;
-        left: 50px;
-        top: 50px;
         cursor: pointer;
          transform: scale(1.1);    
 }
-
+/* 
 .exit_btn{
 	right: 670px;
-    position: absolute;
     bottom: -76px;
 }
 
-
-
-/* #link {color: #E45635;display:block;font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;text-align:center; text-decoration: none;}
-#link:hover {color: #CCCCCC}
-
-#link, #link:hover {-webkit-transition: color 0.5s ease-out;-moz-transition: color 0.5s ease-out;-ms-transition: color 0.5s ease-out;-o-transition: color 0.5s ease-out;transition: color 0.5s ease-out;}
-
-* BEGIN CSS *
-        body {background: #333333;}
-        @keyframes rotate-loading {
-            0%  {transform: rotate(0deg);-ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); -o-transform: rotate(0deg); -moz-transform: rotate(0deg);}
-            100% {transform: rotate(360deg);-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); -o-transform: rotate(360deg); -moz-transform: rotate(360deg);}
-        }
-
-        @-moz-keyframes rotate-loading {
-            0%  {transform: rotate(0deg);-ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); -o-transform: rotate(0deg); -moz-transform: rotate(0deg);}
-            100% {transform: rotate(360deg);-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); -o-transform: rotate(360deg); -moz-transform: rotate(360deg);}
-        }
-
-        @-webkit-keyframes rotate-loading {
-            0%  {transform: rotate(0deg);-ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); -o-transform: rotate(0deg); -moz-transform: rotate(0deg);}
-            100% {transform: rotate(360deg);-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); -o-transform: rotate(360deg); -moz-transform: rotate(360deg);}
-        }
-
-        @-o-keyframes rotate-loading {
-            0%  {transform: rotate(0deg);-ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); -o-transform: rotate(0deg); -moz-transform: rotate(0deg);}
-            100% {transform: rotate(360deg);-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); -o-transform: rotate(360deg); -moz-transform: rotate(360deg);}
-        }
-
-        @keyframes rotate-loading {
-            0%  {transform: rotate(0deg);-ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); -o-transform: rotate(0deg); -moz-transform: rotate(0deg);}
-            100% {transform: rotate(360deg);-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); -o-transform: rotate(360deg); -moz-transform: rotate(360deg);}
-        }
-
-        @-moz-keyframes rotate-loading {
-            0%  {transform: rotate(0deg);-ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); -o-transform: rotate(0deg); -moz-transform: rotate(0deg);}
-            100% {transform: rotate(360deg);-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); -o-transform: rotate(360deg); -moz-transform: rotate(360deg);}
-        }
-
-        @-webkit-keyframes rotate-loading {
-            0%  {transform: rotate(0deg);-ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); -o-transform: rotate(0deg); -moz-transform: rotate(0deg);}
-            100% {transform: rotate(360deg);-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); -o-transform: rotate(360deg); -moz-transform: rotate(360deg);}
-        }
-
-        @-o-keyframes rotate-loading {
-            0%  {transform: rotate(0deg);-ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); -o-transform: rotate(0deg); -moz-transform: rotate(0deg);}
-            100% {transform: rotate(360deg);-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); -o-transform: rotate(360deg); -moz-transform: rotate(360deg);}
-        }
-
-        @keyframes loading-text-opacity {
-            0%  {opacity: 0}
-            20% {opacity: 0}
-            50% {opacity: 1}
-            100%{opacity: 0}
-        }
-
-        @-moz-keyframes loading-text-opacity {
-            0%  {opacity: 0}
-            20% {opacity: 0}
-            50% {opacity: 1}
-            100%{opacity: 0}
-        }
-
-        @-webkit-keyframes loading-text-opacity {
-            0%  {opacity: 0}
-            20% {opacity: 0}
-            50% {opacity: 1}
-            100%{opacity: 0}
-        }
-
-        @-o-keyframes loading-text-opacity {
-            0%  {opacity: 0}
-            20% {opacity: 0}
-            50% {opacity: 1}
-            100%{opacity: 0}
-        }
-        .loading-container,
-        .loading {
-            height: 100px;
-            position: relative;
-            width: 100px;
-            border-radius: 100%;
-        }
-
-
-        .loading-container { margin: 40px auto }
-
-        .loading {
-            border: 2px solid transparent;
-            border-color: transparent #fff transparent #FFF;
-            -moz-animation: rotate-loading 1.5s linear 0s infinite normal;
-            -moz-transform-origin: 50% 50%;
-            -o-animation: rotate-loading 1.5s linear 0s infinite normal;
-            -o-transform-origin: 50% 50%;
-            -webkit-animation: rotate-loading 1.5s linear 0s infinite normal;
-            -webkit-transform-origin: 50% 50%;
-            animation: rotate-loading 1.5s linear 0s infinite normal;
-            transform-origin: 50% 50%;
-        }
-
-        .loading-container:hover .loading {
-            border-color: transparent #E45635 transparent #E45635;
-        }
-        .loading-container:hover .loading,
-        .loading-container .loading {
-            -webkit-transition: all 0.5s ease-in-out;
-            -moz-transition: all 0.5s ease-in-out;
-            -ms-transition: all 0.5s ease-in-out;
-            -o-transition: all 0.5s ease-in-out;
-            transition: all 0.5s ease-in-out;
-        }
-
-        #loading-text {
-            -moz-animation: loading-text-opacity 2s linear 0s infinite normal;
-            -o-animation: loading-text-opacity 2s linear 0s infinite normal;
-            -webkit-animation: loading-text-opacity 2s linear 0s infinite normal;
-            animation: loading-text-opacity 2s linear 0s infinite normal;
-            color: #ffffff;
-            font-family: "Helvetica Neue, "Helvetica", ""arial";
-            font-size: 10px;
-            font-weight: bold;
-            margin-top: 45px;
-            opacity: 0;
-            position: absolute;
-            text-align: center;
-            text-transform: uppercase;
-            top: 0;
-            width: 100px;
-        }
  */

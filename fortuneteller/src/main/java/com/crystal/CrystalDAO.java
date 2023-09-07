@@ -4,8 +4,6 @@ import java.util.*;
 import java.sql.*;
 import javax.sql.*;
 
-import com.review.ReviewVO;
-
 public class CrystalDAO {
 
 	private static CrystalDAO instance=null;
@@ -68,30 +66,34 @@ public class CrystalDAO {
 	
 	
 	
-//결과값(랜덤) 불러오기-------crystalResult
+//결과값(랜덤) 불러오기-------content
 	public CrystalVO getResult(String crystalResult) {
 		
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		CrystalVO cVO = null;
-		// String crystalContent="";
-		System.out.println(crystalResult);
+		CrystalVO vo=null;
+		
+		//String crystalContent="";
+		//String crystalImage="";
+		System.out.println();
 		
 		try {
 			conn = ConnUtil.getConnection(); //DB 연결
 			
-			String sql= "Select * from (select * from " + crystalResult + " order by DBMS_RANDOM.value) where rownum = 1";
+			String sql= "Select * from (select * from "+crystalResult+" order by DBMS_RANDOM.value) where rownum = 1";
 			pstmt = conn.prepareStatement(sql);
 			//pstmt.setString(1, crystalResult);
 			
 			rs = pstmt.executeQuery(); // 수행 결과로 resultSet객체의 값을 반환(select 구문 사용시 이용되는 함수)
 			
 			if(rs.next()) {
-				cVO = new CrystalVO();
-				cVO.setContent(rs.getString("content"));
-				cVO.setImageUrl(rs.getString("image"));
-				// crystalContent=rs.getString("content");
+				vo=new CrystalVO();
+				//crystalContent=rs.getString("content");
+				//crystalImage=rs.getString("image");
+				
+				vo.setContent(rs.getString("content"));
+				vo.setImage(rs.getString("image"));
 			}
 			
 		}catch (Exception e) { //예외처리
@@ -111,8 +113,8 @@ public class CrystalDAO {
 			}
 		}
 		
-		System.out.println("테스트 결과: " + cVO.getContent());
-		System.out.println("이미지 링크: " + cVO.getImageUrl());
-		return cVO;
+		System.out.println("테스트 결과: " + vo.getContent());
+		/* return crystalContent; */
+		return vo;
 	}
 }

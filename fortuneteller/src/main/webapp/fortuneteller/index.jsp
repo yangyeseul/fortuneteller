@@ -117,7 +117,7 @@
 		pagefile = "/fortuneteller/crystal/" + pagefile;
 	}else if(pagefile.contains("crystalLoading.jsp")){	
 		pagefile = "/fortuneteller/crystal/" + pagefile;
-	}else if(pagefile.contains("crystalResults.jsp")){	
+	}else if(pagefile.contains("crystalResult.jsp")){	
 		pagefile = "/fortuneteller/crystal/" + pagefile;
 	} else if(pagefile.equals("testHistory.jsp")){ // 테스트 히스토리
 		pagefile = "/fortuneteller/history/" + pagefile;

@@ -1,4 +1,3 @@
-
 function crystalCheck(id){
 	
 	if(id==""){
