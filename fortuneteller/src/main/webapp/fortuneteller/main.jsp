@@ -15,9 +15,9 @@
 	
 	<ul class="main_slide_hashtag">
 		<li><a href="/fortuneteller/index.jsp?page=ootdTest.jsp">#오늘의행운룩</a></li>
-		<li><a href="#">#수정구슬</a></li>
-		<li><a href="#">#별자리운세</a></li>
-		<li><a href="#">#띠별운세</a></li>
+		<li><a href="/fortuneteller/index.jsp?page=crystalMain.jsp">#수정구슬</a></li>
+		<li><a href="/fortuneteller/index.jsp?page=constellationMain.jsp">#별자리운세</a></li>
+		<li><a href="/fortuneteller/index.jsp?page=ZodiacTestView.jsp">#띠별운세</a></li>
 	</ul>
 			
 	<div class="main_wrap">
@@ -27,7 +27,7 @@
 			</div>
 
 			<div class="main_slide">
-				<a href="#"><img src="/fortuneteller/img/slide02.png"></a>
+				<a href="/fortuneteller/index.jsp?page=crystalMain.jsp"><img src="/fortuneteller/img/crystal_pageimage2.png"></a>
 			</div>
 			
 			<div class="main_slide">

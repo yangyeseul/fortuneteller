@@ -25,7 +25,7 @@ private static HistoryDAO instance=null;
 	}
 	
 	
-public int getTestCount() {
+public int getTestCount(String id) {
 		
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -36,7 +36,8 @@ public int getTestCount() {
 		
 		try {
 			conn = ConnUtil.getConnection();
-			pstmt = conn.prepareStatement("select count(*) from history");
+			pstmt = conn.prepareStatement("select count(*) from history where id=?");
+			pstmt.setString(1, id);
 			rs=pstmt.executeQuery();
 			
 			if(rs.next()) {
@@ -66,7 +67,7 @@ public int getTestCount() {
 	
 }//
 
-public List<InfoVO> getInfo(int start, int end) {
+public List<InfoVO> getInfo(int start, int end, String id) {
 	Connection conn = null;
 	PreparedStatement pstmt = null;
 	ResultSet rs = null;
@@ -75,9 +76,10 @@ public List<InfoVO> getInfo(int start, int end) {
 	try {
 		
 		conn = ConnUtil.getConnection();
-		pstmt = conn.prepareStatement("select * from (select rownum rnum, num, id, regdate, image, testName, testPage from (select * from history order by num desc)) where rnum >= ? and rnum <=?");
-		pstmt.setInt(1, start );
-		pstmt.setInt(2, end );
+		pstmt = conn.prepareStatement("select * from (select rownum rnum, num, id, regdate, image, testName, testPage from (select * from history  where id=? order by num desc)) where rnum >= ? and rnum <=?");
+		pstmt.setString(1, id);
+		pstmt.setInt(2, start );
+		pstmt.setInt(3, end );
 		
 		rs=pstmt.executeQuery();
 		
@@ -148,7 +150,7 @@ public void historyDelete(int num) {
 	
 }//
 
-public List<InfoVO> getInfo(int start, int end,String what,String text) {
+public List<InfoVO> getInfo(int start, int end,String what,String text,String id) {
 	Connection conn = null;
 	PreparedStatement pstmt = null;
 	ResultSet rs = null;
@@ -157,9 +159,10 @@ public List<InfoVO> getInfo(int start, int end,String what,String text) {
 	try {
 		
 		conn = ConnUtil.getConnection();
-		pstmt = conn.prepareStatement("select * from (select rownum rnum, num, id, regdate, image, testName, testPage from (select * from history where "+what+" like '%"+text+"%' order by num desc)) where rnum >= ? and rnum <=?");
-		pstmt.setInt(1, start );
-		pstmt.setInt(2, end );
+		pstmt = conn.prepareStatement("select * from (select rownum rnum, num, id, regdate, image, testName, testPage from (select * from history where "+what+" like '%"+text+"%' and id=? order by num desc)) where rnum >= ? and rnum <=?");
+		pstmt.setString(1, id);
+		pstmt.setInt(2, start );
+		pstmt.setInt(3, end );
 		
 		rs=pstmt.executeQuery();
 		
@@ -199,7 +202,7 @@ public List<InfoVO> getInfo(int start, int end,String what,String text) {
 	return list;
 }//
 
-public int getTestCount(String what,String text) {
+public int getTestCount(String what,String text,String id) {
 	
 	Connection conn = null;
 	PreparedStatement pstmt = null;
@@ -210,7 +213,8 @@ public int getTestCount(String what,String text) {
 	
 	try {
 		conn = ConnUtil.getConnection();
-		pstmt = conn.prepareStatement("select count(*) from history where "+what+" like '%"+text+"%'");
+		pstmt = conn.prepareStatement("select count(*) from history where "+what+" like '%"+text+"%' and id=? ");
+		pstmt.setString(1, id);
 		rs=pstmt.executeQuery();
 		
 		if(rs.next()) {

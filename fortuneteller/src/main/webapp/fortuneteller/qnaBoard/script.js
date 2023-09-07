@@ -10,13 +10,5 @@ var num = urlParams.get('num');
      history.back();
  }
 }
-function toggleDown(){
-	
-	var click = document.getElementById("toggle_bar");
-			if(click.style.display == 'none'){
-                click.style.display = 'block';
-            }else{
-                click.style.display = 'none';
-            }
-};
+
 
