@@ -25,7 +25,7 @@ String gender = daoPro.getGender();
 		<a href="/fortuneteller/index.jsp?page=mypage_modify.jsp">
 			<button class="button" id="modInputBtn">회원정보 수정</button>
 		</a> &nbsp;&nbsp;
-		<a href="/fortuneteller/index.jsp?page=testHistory.jsp">
+		<a href="/fortuneteller/index.jsp?page=testHistory.jsp&pageNum=1">
 			<button class="button" id="modInputBtn_before">이전결과 확인</button>
 		</a>
 	</div>

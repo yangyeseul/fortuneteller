@@ -61,15 +61,16 @@
 	<div class="list_container">
 		<form class="list_form" >
 	<% 
-		if(count == 0) { // 글이 없을 때 
-	%>
+	if(count == 0){
+			%>
 			<table class="list_table_03">
 				<tr height="40">
 					<td align="center" height="40"><div class="nocontents">게시판에 저장된 글이 없습니다.</td>
 				</tr>
 			</table>
-	<% 
-		} else { // 글이 있을 때 
+	<%
+		}else { // 글이 있을 때 
+		
 	%>
 			<table class="list_table_03">
 				<tr height="40">

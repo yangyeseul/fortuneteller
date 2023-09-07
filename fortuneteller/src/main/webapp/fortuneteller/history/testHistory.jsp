@@ -34,14 +34,15 @@
 		
 		
 		if(text ==null){
-			count = dao.getTestCount();//전체 글 수
+			count = dao.getTestCount(id);//전체 글
+			System.out.print(count);
 				if(count >0){
-					paging = dao.getInfo(startRow,endRow);
+					paging = dao.getInfo(startRow,endRow,id);
 				}
 		}else {//검색이면
-					count = dao.getTestCount(what, text);
+					count = dao.getTestCount(what, text ,id);
 				if(count >0){
-					paging = dao.getInfo(startRow,endRow,what, text);
+					paging = dao.getInfo(startRow,endRow,what, text ,id);
 				}
 		}
 		
@@ -54,100 +55,100 @@
 <link type="text/css" rel="stylesheet" href="/fortuneteller/history/testHistory.css">
 </head>
 <body>
-<div class="history_wrap">	
-	<%if(count==0){ %>
-			<span>테스트 내역이 없습니다.</span>
-	
-	<%}else{ %>
-	<div class="testHistoryContainer">
-		<% 
-		for(int i=0;i<paging.size();i++){
-			InfoVO vo = (InfoVO) paging.get(i);
-		%>
-		
-		<table  class="testHistoryTable" align="center">
-			<tr>
-				<td align="center" colspan="2"><a href="<%=vo.getTestPage()%>"><img src="<%=vo.getImage()%>" width="170" height="150" id="historyImg"></a></td>
-			</tr>
-			<tr>
-				<td><a href="<%=vo.getTestPage()%>"><%=vo.getTestName() %></a></td>
-			</tr>
-			<tr >
-				<td id="format"><a href="<%=vo.getTestPage()%>"><%=simpleFormat.format(vo.getRegdate()) %></a></td>
-				<td id="historyDelete"><input type="button" value="삭제" onclick="document.location.href='/history/historyDelete.jsp?num=<%=vo.getNum()%>&pageNum=<%=pageNum%>'"></td>
-			</tr>
-			
-		</table>	
-		
-		
-			<%
-		}	
-		} %> 
-	</div>
-	
-	
-	<!-- 페이징 -->
-	<div class="historyPaging" align="center">
-	<%if(count>0) {
-		
-		int pageBlock = 1;//3
-		int imsi = count % pageSize ==0 ? 0 : 1;//1일 때는 다음페이지로 0일 때는 딱 떨어짐
-		int pageCount = count / pageSize + imsi;
-		
-		int startPage =(int) ((currentPage -1) / pageBlock) * pageBlock  + 1;
-		int endPage = startPage + pageBlock - 1;
-		
-		if(endPage > pageCount){ 
-				endPage = pageCount;
-			}
-		
-		if(startPage > pageBlock) {
-			if(text==null){
+
+<%if(count==0){ %>
+		<span>테스트 내역이 없습니다.</span>
+
+<%}else{ %>
+<div class="testHistoryContainer">
+	<% 
+	for(int i=0;i<paging.size();i++){
+		InfoVO vo = (InfoVO) paging.get(i);
 	%>
-	<a href="/fortuneteller/index.jsp?page=testHistory.jsp&pageNum=<%=startPage-pageBlock%>"><&nbsp;&nbsp;</a>
 	
-	<%}else{%>
-	<a href="/fortuneteller/index.jsp?page=testHistory.jsp&pageNum=<%=startPage-pageBlock%>&searchWhat=<%=what%>&searchText=<%=text%>"><&nbsp;&nbsp;</a>
+	<table  class="testHistoryTable" align="center">
+		<tr>
+			<td align="center" colspan="2"><a href="<%=vo.getTestPage()%>"><img src="<%=vo.getImage()%>" width="170" height="150" id="historyImg"></a></td>
+		</tr>
+		<tr>
+			<td><a href="<%=vo.getTestPage()%>"><%=vo.getTestName() %></a></td>
+		</tr>
+		<tr >
+			<td id="format"><a href="<%=vo.getTestPage()%>"><%=simpleFormat.format(vo.getRegdate()) %></a></td>
+			<td id="historyDelete"><input type="button" value="삭제" onclick="document.location.href='/history/historyDelete.jsp?num=<%=vo.getNum()%>&pageNum=<%=pageNum%>'"></td>
+		</tr>
+		
+	</table>	
 	
-	<%} 
+	
+		<%
+	}	
+	} %> 
+		
+</div>
+
+
+<!-- 페이징 -->
+<div class="historyPaging" align="center">
+<%if(count>0) {
+	
+	int pageBlock = 1;//3
+	int imsi = count % pageSize ==0 ? 0 : 1;//1일 때는 다음페이지로 0일 때는 딱 떨어짐
+	int pageCount = count / pageSize + imsi;
+	
+	int startPage =(int) ((currentPage -1) / pageBlock) * pageBlock  + 1;
+	int endPage = startPage + pageBlock - 1;
+	
+	if(endPage > pageCount){ 
+			endPage = pageCount;
 		}
-		 	for(int i =startPage; i<=endPage; i++){
-		 		if(text==null){
-		%>
-	<a href="/fortuneteller/index.jsp?page=testHistory.jsp&pageNum=<%=i%>" id="current_page">&nbsp;<%=i %>&nbsp;</a>
+	
+	if(startPage > pageBlock) {
+		if(text==null){
+%>
+<a href="/fortuneteller/index.jsp?page=history.jsp&pageNum=<%=startPage-pageBlock%>"><&nbsp;&nbsp;</a>
+
+<%}else{%>
+<a href="/fortuneteller/index.jsp?page=history.jsp&pageNum=<%=startPage-pageBlock%>&searchWhat=<%=what%>&searchText=<%=text%>"><&nbsp;&nbsp;</a>
+
+<%} 
+	}
+	 	for(int i =startPage; i<=endPage; i++){
+	 		if(text==null){
+	%>
+<a href="/fortuneteller/index.jsp?page=history.jsp&pageNum=<%=i%>" id="current_page">&nbsp;<%=i %>&nbsp;</a>
+
+<%}else{ %>
+<a href="/fortuneteller/index.jsp?page=history.jsp&pageNum=<%=i%>&searchWhat=<%=what%>&searchText=<%=text%>">&nbsp;<%=i %>&nbsp;</a>
+
+<%}
+	 	}
+	 	
+	if(endPage < pageCount){
+		if(text==null){
+	%>
+	<a href="/fortuneteller/index.jsp?page=history.jsp&pageNum=<%=startPage+pageBlock%>">&nbsp;&nbsp;></a>
 	
 	<%}else{ %>
-	<a href="/fortuneteller/index.jsp?page=testHistory.jsp&pageNum=<%=i%>&searchWhat=<%=what%>&searchText=<%=text%>">&nbsp;<%=i %>&nbsp;</a>
+	<a href="/fortuneteller/index.jsp?page=history.jsp&pageNum=<%=startPage+pageBlock%>&searchWhat=<%=what%>&searchText=<%=text%>">&nbsp;&nbsp;></a>
 	
-	<%}
-		 	}
-		 	
-		if(endPage < pageCount){
-			if(text==null){
-		%>
-		<a href="/fortuneteller/index.jsp?page=testHistory.jsp&pageNum=<%=startPage+pageBlock%>">&nbsp;&nbsp;></a>
-		
-		<%}else{ %>
-		<a href="/fortuneteller/index.jsp?page=testHistory.jsp&pageNum=<%=startPage+pageBlock%>&searchWhat=<%=what%>&searchText=<%=text%>">&nbsp;&nbsp;></a>
-		
-	<%}
-		}
+<%}
 	}
-		%>
-	</div>
-	
-	<div class="historySearch">
-	
-			<!--검색폼  -->
-		<form action="/fortuneteller/index.jsp?page=testHistory.jsp" method="post" id="historySearchForm" onsubmit="return check()" name="historySearchForm">
-			<select name="searchWhat" >
-				<!-- <option value="full" align="center">전체보기</option> -->
-				<option value="testName" align="center">테스트 이름</option>
-				<!-- <option value="regdate"  align="center">날짜</option> -->
-			</select>&nbsp; <input type="text" name="searchText" "> &nbsp;<input type="submit" value="Search">
-		</form>
-		</div>
+}
+	%>
 </div>
+
+<div class="historySearch">
+
+		<!--검색폼  -->
+	<form action="/fortuneteller/index.jsp?page=history.jsp" method="post" id="historySearchForm" onsubmit="return check()" name="historySearchForm">
+		<select name="searchWhat" >
+			<!-- <option value="full" align="center">전체보기</option> -->
+			<option value="testName" align="center">테스트 이름</option>
+			<!-- <option value="regdate"  align="center">날짜</option> -->
+		</select>&nbsp; <input type="text" name="searchText" "> &nbsp;<input type="submit" value="Search">
+	</form>
+	</div>
 	
 	<script type="text/javascript">
 		function check(){
