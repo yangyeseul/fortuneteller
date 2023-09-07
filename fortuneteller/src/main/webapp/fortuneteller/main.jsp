@@ -27,7 +27,7 @@
 			</div>
 
 			<div class="main_slide">
-				<a href="#"><img src="/fortuneteller/img/slide02.png"></a>
+				<a href="/fortuneteller/index.jsp?page=crystal_pageimage2.jsp"><img src="/fortuneteller/img/slide02.png"></a>
 			</div>
 			
 			<div class="main_slide">
