@@ -107,6 +107,18 @@
 		pagefile = "/fortuneteller/zodiac/" + pagefile;
 	} else if(pagefile.equals("weekResult.jsp")){
 		pagefile = "/fortuneteller/zodiac/" + pagefile;
+	} else if(pagefile.equals("crystalMain.jsp")){		//수정구슬 (시작)
+		pagefile = "/fortuneteller/crystal/" + pagefile;
+	}else if(pagefile.equals("crystalCheck.jsp")){		
+		pagefile = "/fortuneteller/crystal/" + pagefile;
+	}else if(pagefile.equals("crystalChat.jsp")){		
+		pagefile = "/fortuneteller/crystal/" + pagefile;
+	}else if(pagefile.equals("crystalKeyword.jsp")){	
+		pagefile = "/fortuneteller/crystal/" + pagefile;
+	}else if(pagefile.contains("crystalLoading.jsp")){	
+		pagefile = "/fortuneteller/crystal/" + pagefile;
+	}else if(pagefile.contains("crystalResult.jsp")){	
+		pagefile = "/fortuneteller/crystal/" + pagefile;
 	} else if(pagefile.equals("testHistory.jsp")){ // 테스트 히스토리
 		pagefile = "/fortuneteller/history/" + pagefile;
 	} else if(pagefile.equals("historyDelete.jsp")){ 

@@ -1,0 +1,244 @@
+@charset "utf-8";
+
+.image img{
+	position:absolute;
+	left: 500px;
+    top: 100px;
+}
+
+@font-face {
+    font-family: 'Pretendard-Bold';
+    src: url('/fortunetellerfont/Pretendard-Bold.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'PuradakGentleGothicR';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.1/PuradakGentleGothicR.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.crystal_main{
+	display:flex;
+	align-items:flex-end;
+	justify-content: center;
+	background:url(/fortuneteller/crystal/crystalImg/crystal_Main.png);
+	width:640px;
+	height:1036px;
+	padding-bottom:100px;
+}
+
+.crystal_main img{
+    cursor: pointer;
+    transition: 0.3s;
+        
+}
+
+.crystal_main img:hover{
+    cursor: pointer;
+    transform: scale(1.1);    
+}
+
+.crystal_text > span {
+	font-family: 'Pretendard-Bold';
+	font-weight:900;
+	font-size:32px;
+	letter-spacing:-2px;
+	line-height:35px;
+	background:linear-gradient(to bottom, white 30%, #d4f9ff 30% 70%, white 70%);
+	
+}
+
+.crystal_text2{
+	font-family: 'Pretendard-Bold';
+	font-weight:900;
+	font-size: 22px;
+	letter-spacing:-2px;
+	line-height:35px;
+	text-align:center;
+}
+
+.crystal_text2 > span {
+	font-family: 'Pretendard-Bold';
+	font-weight:900;
+	font-size: 35px;
+	letter-spacing:-2px;
+	line-height:35px;
+}
+
+
+#crystal_chat_wrap{
+	background: url(/fortuneteller/crystal/crystalImg/crystal_Background.png); 
+	width:640px; 
+	height:976px;
+	padding:80px 0;
+	display:flex;
+	flex-direction:column;
+	justify-content:space-between;
+	align-items:center;
+}
+
+.chat10_btn{
+	display:none;
+	text-align:center;
+}
+
+.chat10_btn img{
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.chat10_btn img:hover{
+    cursor: pointer;
+    transform: scale(1.1);    
+}
+
+
+/*---------------------------------------------------------------------------------------------*/
+
+#crystal_keyword_wrap{
+	background: url(/fortuneteller/crystal/crystalImg/crystal_Background.png); 
+	width:640px; 
+	height:976px;
+	padding:80px 0;
+	display:flex;
+	flex-direction:column; /* 상위 */
+	justify-content:space-between; /* 하위(가로) */
+	align-items:center; /* 하위(세로) */
+}
+
+
+.keyword_effect img{
+ 	position: relative;
+    left: 50px;
+    top: 50px;
+    cursor: pointer;
+    transition: 0.3s;       
+}
+
+.keyword_effect img:hover{
+ 	position: relative;
+    left: 50px;
+    top: 50px;
+    cursor: pointer;
+    transform: scale(1.1);    
+}
+
+.keyword_effect{
+	width:80%;
+	/* background:pink; */
+	padding:20px 0;
+	display:flex;
+	flex-wrap: wrap;
+	justify-content:space-evenly;
+}
+
+.keyword_effect div{
+	margin-bottom: 20px;
+}
+
+.keyword_effect div:last-child{
+	margin-bottom:0px;
+}
+
+
+/*---------------------------------------------------------------------------------------------*/
+
+#crystal_loading_wrap{
+	background-image: url(/fortuneteller/crystal/crystalImg/crystal_loading.gif);
+	background-size: cover;
+	width:630px; 
+	height:630px; 
+	display:flex;
+	flex-direction:column;
+	justify-content:space-between;
+	align-items:center;
+}
+
+
+.crystal_loading_text{
+	width:450px;
+  	margin-top: 425px;
+}
+
+/*---------------------------------------------------------------------------------------------*/
+
+#crystal_result_wrap{
+	background: url(/fortuneteller/crystal/crystalImg/crystal_result.png); 
+	width:640px; 
+	height:976px;
+	padding:60px 0;
+	display:flex;
+	flex-direction:column;
+	justify-content:space-between;
+	align-items:center;
+}
+
+.resultName {
+    font-family: 'Pretendard-Bold';
+    font-weight: bold;
+    font-size: 50px;
+    color: pink;
+    letter-spacing: 3px;
+    margin-top:20px;
+    margin-right:280px;
+	
+}
+
+.resultimage img{
+	margin-top:80px;
+	width:430px; 
+	height:430px;
+}
+
+
+.square{
+      width: 500px;
+      height: 150px;
+      background: rgba(255,252,217,0.2);
+
+/* 	
+	border-bottom: 360px solid #666666;
+	border-left: 180px solid transparent;
+	border-right: 180px solid #666666;
+	
+	border-bottom-width : 테두리 하단 두께
+	border-bottom-style : 테두리 하단 스타일
+	border-bottom-color : 테두리 하단 색상
+*/
+}
+
+
+.resultcontent{
+	font-family: 'Pretendard-Bold';
+    font-size: 20px;
+    color: #fffcd9;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; 
+}
+
+
+.exit_btn img{
+        left: 50px;
+        top: 50px;
+        cursor: pointer;
+        transition: 0.3s;
+}
+
+.exit_btn img:hover{
+        cursor: pointer;
+         transform: scale(1.1);    
+}
+/* 
+.exit_btn{
+	right: 670px;
+    bottom: -76px;
+}
+
+ */
